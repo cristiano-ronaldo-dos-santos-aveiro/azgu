@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
+<html class="light" lang="uz">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>AZGU Nutrition Plan</title>
+    <title>AZGU — Nutrition Plan</title>
+    <link rel="icon" href="./assets/logo.png" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap"
@@ -119,22 +120,31 @@
     >
       <div class="flex items-center gap-4">
         <span class="material-symbols-outlined text-[#03271a] cursor-pointer">menu</span>
-        <span class="text-xl font-black text-[#03271a] tracking-tighter">AZGU Nutrition Plan</span>
+        <a class="flex items-center gap-3" href="#home" aria-label="AZGU bosh sahifa">
+          <img src="./assets/logo.png" alt="AZGU logo" class="h-8 w-8 rounded-md object-cover shadow-sm" />
+          <span class="text-xl font-black text-[#03271a] tracking-tighter">AZGU</span>
+        </a>
       </div>
 
       <nav class="hidden md:flex gap-8 items-center font-['Lexend'] font-bold tracking-tight text-lg">
-        <a class="nav-link text-[#4a6700] hover:opacity-80 transition-opacity" href="#home">Home</a>
-        <a class="nav-link text-[#4a6700] hover:opacity-80 transition-opacity" href="#menu">Menu</a>
-        <a class="nav-link text-[#4a6700] hover:opacity-80 transition-opacity" href="#meal">Meal</a>
-        <a class="nav-link text-[#4a6700] hover:opacity-80 transition-opacity" href="#cart">Cart</a>
+        <a class="nav-link text-[#4a6700] hover:opacity-80 transition-opacity" href="#home">Bosh sahifa</a>
+        <a class="nav-link text-[#4a6700] hover:opacity-80 transition-opacity" href="#menu">Menyu</a>
+        <a class="nav-link text-[#4a6700] hover:opacity-80 transition-opacity" href="#meal">Taom</a>
+        <a class="nav-link text-[#4a6700] hover:opacity-80 transition-opacity" href="#cart">
+          Savat
+          <span
+            id="cart-badge-desktop"
+            class="ml-2 hidden inline-flex items-center justify-center text-[11px] font-black bg-secondary-container text-primary w-6 h-6 rounded-full align-middle"
+          ></span>
+        </a>
       </nav>
 
-      <div class="flex items-center gap-2 bg-surface-container-low rounded-full px-3 py-1">
-        <span class="text-xs font-bold text-[#03271a]">ENG</span>
-        <span class="text-xs text-outline opacity-40">|</span>
-        <span class="text-xs font-medium text-outline">UZ</span>
+      <div class="flex items-center gap-2 bg-surface-container-low rounded-full px-3 py-1" aria-label="Til">
+        <span class="text-xs font-bold text-[#03271a]">UZ</span>
         <span class="text-xs text-outline opacity-40">|</span>
         <span class="text-xs font-medium text-outline">RU</span>
+        <span class="text-xs text-outline opacity-40">|</span>
+        <span class="text-xs font-medium text-outline">EN</span>
       </div>
     </header>
 
@@ -145,25 +155,20 @@
         <section class="relative px-6 py-12 md:py-24 overflow-hidden">
           <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
             <div class="flex-1 space-y-6 z-10">
-              <img
-                alt="AZGU Logo"
-                class="h-16 w-auto"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBhgVWv6KpUbY8sj-6OksVg3QV1EtDXq89nCO5D7Da1picMV6OgOH-dec-TmWkc83HdcpDY38iE7xdYBFN56JMG9VageqdpHE5SX4dSJnR9-lHx_E6qNxpOsjQwBfs3ZspNVaYv7yhMSlkCxbVUU6Cw9V8NhVtfbPONmzypOIxP1gFGbgLB2cE7VBgOGKqaoS-G5ialxXMZ6oYXKyz9e4ilKhXV4erwNsi5x5wTN54nnnleiWGPSkDsR8wui-qGmU1C1X1c1xBveY"
-              />
+              <img alt="AZGU Logo" class="h-16 w-auto" src="./assets/logo.png" />
               <h1 class="text-5xl md:text-7xl font-black tracking-tight leading-none text-primary">
-                Precision Nutrition <br />
-                for Your <span class="text-secondary">Peak Performance.</span>
+                Aniqlik bilan ovqatlaning <br />
+                <span class="text-secondary">maksimal natija</span> uchun.
               </h1>
               <p class="text-lg md:text-xl text-on-surface-variant max-w-lg font-medium">
-                Chef-prepared meals with real-time tracking for your fitness goals. Designed by scientists, prepared
-                by masters.
+                Maqsadingizga mos, oshpazlar tayyorlagan taomlar va kunlik nazorat. Ilmiy asoslangan, mukammal ta’m.
               </p>
               <div class="pt-4">
                 <a
                   class="inline-flex items-center justify-center bg-primary text-on-primary px-10 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-primary/20 transition-all active:scale-95"
                   href="#menu"
                 >
-                  Explore the Menu
+                  Menyuni ko‘rish
                 </a>
               </div>
             </div>
@@ -179,9 +184,9 @@
               <div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-lg shadow-xl max-w-[200px]">
                 <div class="flex items-center gap-2 mb-2">
                   <span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1">monitoring</span>
-                  <span class="text-xs font-bold uppercase tracking-wider text-outline">Live Tracking</span>
+                  <span class="text-xs font-bold uppercase tracking-wider text-outline">Live nazorat</span>
                 </div>
-                <p class="text-sm font-semibold">98% Accuracy in Macro-Tracking</p>
+                <p class="text-sm font-semibold">Makrolar hisobida 98% aniqlik</p>
               </div>
             </div>
           </div>
@@ -191,11 +196,11 @@
           <div class="max-w-7xl mx-auto">
             <div class="flex justify-between items-end mb-12">
               <div>
-                <h2 class="text-3xl font-bold text-primary">Featured Meals</h2>
-                <p class="text-on-surface-variant">Selected by our nutritionists for this week's performance</p>
+                <h2 class="text-3xl font-bold text-primary">Tavsiya etilgan taomlar</h2>
+                <p class="text-on-surface-variant">Bu hafta uchun dietologlar tanlovi</p>
               </div>
               <a class="text-secondary font-bold flex items-center gap-1 group" href="#menu">
-                View All
+                Hammasi
                 <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
               </a>
             </div>
@@ -212,10 +217,16 @@
                   <h3 class="text-xl font-bold mb-1">Atlantic Salmon Bliss</h3>
                   <p class="text-sm text-on-surface-variant mb-4">High Omega-3, rich in lean protein and micro-greens.</p>
                   <div class="flex justify-between items-center">
-                    <span class="text-2xl font-black text-primary">$18.50</span>
-                    <a class="p-2 rounded-full bg-surface-container hover:bg-secondary-container transition-colors" href="#cart">
+                    <span class="text-2xl font-black text-primary">75,000 UZS</span>
+                    <button
+                      class="p-2 rounded-full bg-surface-container hover:bg-secondary-container transition-colors"
+                      type="button"
+                      data-action="add-to-cart"
+                      data-product-id="salmon"
+                      aria-label="Savatga qo‘shish"
+                    >
                       <span class="material-symbols-outlined">add_shopping_cart</span>
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -231,10 +242,16 @@
                   <h3 class="text-xl font-bold mb-1">Quinoa Power Bowl</h3>
                   <p class="text-sm text-on-surface-variant mb-4">Plant-based complex carbs for sustained energy.</p>
                   <div class="flex justify-between items-center">
-                    <span class="text-2xl font-black text-primary">$14.20</span>
-                    <a class="p-2 rounded-full bg-surface-container hover:bg-secondary-container transition-colors" href="#cart">
+                    <span class="text-2xl font-black text-primary">52,000 UZS</span>
+                    <button
+                      class="p-2 rounded-full bg-surface-container hover:bg-secondary-container transition-colors"
+                      type="button"
+                      data-action="add-to-cart"
+                      data-product-id="bowl"
+                      aria-label="Savatga qo‘shish"
+                    >
                       <span class="material-symbols-outlined">add_shopping_cart</span>
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -250,10 +267,16 @@
                   <h3 class="text-xl font-bold mb-1">Prime Beef &amp; Broccoli</h3>
                   <p class="text-sm text-on-surface-variant mb-4">High protein content for optimal muscle recovery.</p>
                   <div class="flex justify-between items-center">
-                    <span class="text-2xl font-black text-primary">$21.00</span>
-                    <a class="p-2 rounded-full bg-surface-container hover:bg-secondary-container transition-colors" href="#cart">
+                    <span class="text-2xl font-black text-primary">115,000 UZS</span>
+                    <button
+                      class="p-2 rounded-full bg-surface-container hover:bg-secondary-container transition-colors"
+                      type="button"
+                      data-action="add-to-cart"
+                      data-product-id="steak"
+                      aria-label="Savatga qo‘shish"
+                    >
                       <span class="material-symbols-outlined">add_shopping_cart</span>
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -275,14 +298,14 @@
                 >
               </div>
               <div class="relative z-10 space-y-2 text-center md:text-left">
-                <h4 class="text-secondary-container font-bold uppercase tracking-widest text-sm">Healthy Eating Tip</h4>
+                <h4 class="text-secondary-container font-bold uppercase tracking-widest text-sm">Sog‘lom odat</h4>
                 <p class="text-white text-xl md:text-3xl font-semibold leading-tight max-w-2xl">
-                  "Did you know? Consistent protein intake supports muscle recovery and metabolic health."
+                  "Bilarmidingiz? Protein me’yorida bo‘lsa, mushak tiklanishi va metabolizm yaxshilanadi."
                 </p>
               </div>
               <div class="relative z-10 md:ml-auto">
                 <a class="bg-secondary-container text-primary font-bold px-6 py-3 rounded-full whitespace-nowrap hover:scale-105 transition-transform" href="#meal"
-                  >Learn More</a
+                  >Batafsil</a
                 >
               </div>
             </div>
@@ -294,17 +317,15 @@
       <main id="view-menu" data-view="menu" class="view hidden">
         <div class="pt-8 pb-12 px-6 max-w-7xl mx-auto">
           <section class="mb-12">
-            <h2 class="font-headline font-extrabold text-5xl md:text-6xl text-primary tracking-tight mb-4">Daily Precision.</h2>
-            <p class="text-on-surface-variant max-w-xl text-lg">
-              Curated meal plans designed for peak performance, scientific accuracy, and culinary excellence.
-            </p>
+            <h2 class="font-headline font-extrabold text-5xl md:text-6xl text-primary tracking-tight mb-4">Har kuni aniqlik.</h2>
+            <p class="text-on-surface-variant max-w-xl text-lg">Maksimal natija uchun ilmiy asoslangan va mazali menyu.</p>
           </section>
 
           <section class="mb-10 overflow-x-auto hide-scrollbar -mx-6 px-6">
             <div class="flex gap-3 min-w-max">
-              <button class="bg-primary text-on-primary px-8 py-3 rounded-full font-headline font-semibold text-sm shadow-lg shadow-primary/10">All</button>
-              <button class="bg-surface-container-low text-primary px-8 py-3 rounded-full font-headline font-semibold text-sm hover:bg-surface-container-high transition-colors">High Protein</button>
-              <button class="bg-surface-container-low text-primary px-8 py-3 rounded-full font-headline font-semibold text-sm hover:bg-surface-container-high transition-colors">Low Carb</button>
+              <button class="bg-primary text-on-primary px-8 py-3 rounded-full font-headline font-semibold text-sm shadow-lg shadow-primary/10">Hammasi</button>
+              <button class="bg-surface-container-low text-primary px-8 py-3 rounded-full font-headline font-semibold text-sm hover:bg-surface-container-high transition-colors">Ko‘p protein</button>
+              <button class="bg-surface-container-low text-primary px-8 py-3 rounded-full font-headline font-semibold text-sm hover:bg-surface-container-high transition-colors">Kam uglevod</button>
               <button class="bg-surface-container-low text-primary px-8 py-3 rounded-full font-headline font-semibold text-sm hover:bg-surface-container-high transition-colors">Vegan</button>
             </div>
           </section>
@@ -350,7 +371,7 @@
                   href="#meal"
                 >
                   <span class="material-symbols-outlined text-[20px]">open_in_new</span>
-                  View meal
+                  Taomni ko‘rish
                 </a>
               </div>
             </article>
@@ -393,7 +414,7 @@
                   href="#cart"
                 >
                   <span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
-                  Add to Cart
+                  Savatga qo‘shish
                 </a>
               </div>
             </article>
@@ -406,8 +427,9 @@
           >
             <span class="material-symbols-outlined text-3xl">shopping_bag</span>
             <span
+              id="cart-badge-fab"
               class="absolute -top-1 -right-1 bg-primary text-on-primary text-[10px] font-bold w-6 h-6 rounded-full flex items-center justify-center border-2 border-surface"
-              >3</span
+              ></span
             >
           </button>
         </div>
@@ -433,8 +455,8 @@
 
           <section class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 px-2">
             <div class="space-y-1">
-              <h2 class="font-headline font-bold text-4xl md:text-5xl text-primary tracking-tight leading-none">Grilled Salmon with Asparagus</h2>
-              <p class="text-on-surface-variant font-medium text-lg">Chef's Signature Seared Fillet</p>
+              <h2 class="font-headline font-bold text-4xl md:text-5xl text-primary tracking-tight leading-none">Gril losos va asparagus</h2>
+              <p class="text-on-surface-variant font-medium text-lg">Oshpaz tavsiyasi</p>
             </div>
             <div class="mt-6 md:mt-0">
               <p class="font-headline font-black text-3xl text-primary">75,000 <span class="text-lg font-bold">UZS</span></p>
@@ -486,7 +508,7 @@
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-28 px-2">
             <div>
-              <h3 class="font-headline font-bold text-2xl mb-6">Ingredients</h3>
+              <h3 class="font-headline font-bold text-2xl mb-6">Tarkibi</h3>
               <ul class="space-y-4">
                 <li class="flex items-center gap-4 text-on-surface-variant">
                   <span class="w-2 h-2 rounded-full bg-secondary"></span>
@@ -513,15 +535,15 @@
             <div class="space-y-6">
               <div class="bg-primary p-8 rounded-lg text-on-primary shadow-xl">
                 <span class="material-symbols-outlined mb-4 scale-125">favorite</span>
-                <h4 class="font-headline font-bold text-xl mb-2">Nutrition Benefit</h4>
-                <p class="text-on-primary-container leading-relaxed">Rich in Omega-3 fatty acids for heart health and joint support.</p>
+                <h4 class="font-headline font-bold text-xl mb-2">Foydasi</h4>
+                <p class="text-on-primary-container leading-relaxed">Omega-3 ko‘p: yurak salomatligi va bo‘g‘imlar uchun foydali.</p>
               </div>
               <div class="bg-secondary-container p-6 rounded-lg border-l-8 border-secondary">
                 <div class="flex gap-4">
                   <span class="material-symbols-outlined text-secondary">lightbulb</span>
                   <div>
-                    <h4 class="font-headline font-bold text-primary mb-1">Healthy Tip</h4>
-                    <p class="text-on-secondary-container text-sm font-medium">Pairing salmon with greens maximizes mineral absorption.</p>
+                    <h4 class="font-headline font-bold text-primary mb-1">Maslahat</h4>
+                    <p class="text-on-secondary-container text-sm font-medium">Lososni ko‘katlar bilan tanovul qilsangiz, minerallar yaxshi so‘riladi.</p>
                   </div>
                 </div>
               </div>
@@ -539,13 +561,15 @@
                   <span class="material-symbols-outlined">add</span>
                 </button>
               </div>
-              <a
+              <button
                 class="flex-1 bg-primary text-on-primary font-headline font-bold py-4 px-8 rounded-full flex items-center justify-center gap-3 hover:opacity-90 active:scale-[0.98] transition-all"
-                href="#cart"
+                type="button"
+                data-action="add-to-cart"
+                data-product-id="salmon"
               >
-                <span>Add to Cart</span>
+                <span>Savatga qo‘shish</span>
                 <span class="material-symbols-outlined">shopping_basket</span>
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -557,13 +581,13 @@
           <section class="mb-10">
             <div class="flex items-end justify-between mb-6">
               <div>
-                <h2 class="font-headline font-bold text-3xl tracking-tight text-primary">Smart Cart Dashboard</h2>
-                <p class="text-on-surface-variant font-medium">Real-time daily plan optimization</p>
+                <h2 class="font-headline font-bold text-3xl tracking-tight text-primary">Aqlli savat</h2>
+                <p class="text-on-surface-variant font-medium">Kunlik reja — real vaqt nazorati</p>
               </div>
               <div class="hidden md:block">
                 <span class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full font-bold text-sm">
                   <span class="material-symbols-outlined text-sm">bolt</span>
-                  OPTIMIZED FOR PERFORMANCE
+                  NATIJA UCHUN MOSLANGAN
                 </span>
               </div>
             </div>
@@ -614,67 +638,73 @@
 
           <div class="flex flex-col lg:flex-row gap-10">
             <div class="flex-grow space-y-6">
-              <h3 class="font-headline text-xl font-bold text-primary">Your Selection</h3>
-              <div class="group flex items-center gap-6 bg-surface-container-lowest p-5 rounded-lg shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] transition-all hover:shadow-[0_20px_50px_-20px_rgba(0,0,0,0.1)]">
-                <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
-                  <img
-                    class="w-full h-full object-cover"
-                    alt="Omega Grilled Salmon"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA94hgG9vOVPzQf21iPcOriwAeM8x8--vcjM69ludVAN2svWfToLe7QI0GvX4y06U4aG_Z8cBJMebYuLvIQNQ2WyKyd_2RxyAwVMXtnZuQ9iEcAQBQ2UlhrTsNRgaU6ChH6756tg--m3HjWIdarzQAiFPl_Lrk-MkUT1do4Nys6y1cjQW8QOVrWgwmgYgiisXO6RfncE3fBgVtMm0_0B6E9BdDMMPHM-j1GtRodeu1d4yEvvuEi1gISaRDmnzdO8s-93iTKUI2XnM"
-                  />
-                </div>
-                <div class="flex-grow">
-                  <div class="flex justify-between items-start">
-                    <div>
-                      <h4 class="font-headline font-bold text-primary text-lg">Omega Grilled Salmon</h4>
-                      <p class="text-on-surface-variant text-sm font-medium">540 kcal • 42g Protein</p>
-                    </div>
-                    <span class="font-headline font-bold text-primary">120,000 UZS</span>
-                  </div>
-                  <div class="flex items-center justify-between mt-4">
-                    <div class="flex items-center bg-surface-container-low rounded-full px-2 py-1">
-                      <button class="p-1 text-primary hover:bg-surface-variant rounded-full transition-colors" type="button">
-                        <span class="material-symbols-outlined text-sm">remove</span>
-                      </button>
-                      <span class="px-4 font-bold text-sm">2</span>
-                      <button class="p-1 text-primary hover:bg-surface-variant rounded-full transition-colors" type="button">
-                        <span class="material-symbols-outlined text-sm">add</span>
-                      </button>
-                    </div>
-                    <button class="text-error font-bold text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity" type="button">
-                      Remove
-                    </button>
-                  </div>
-                </div>
+              <h3 class="font-headline text-xl font-bold text-primary">Tanlanganlar</h3>
+              <div id="cart-items" class="space-y-4"></div>
+
+              <div id="cart-empty" class="hidden bg-surface-container-lowest rounded-lg p-8 border border-outline-variant/30">
+                <h4 class="font-headline font-bold text-xl text-primary mb-2">Savat bo‘sh</h4>
+                <p class="text-on-surface-variant font-medium mb-6">Menyudan taom tanlab, savatga qo‘shing.</p>
+                <a class="inline-flex items-center justify-center bg-primary text-on-primary px-6 py-3 rounded-full font-bold" href="#menu">Menyuga o‘tish</a>
               </div>
+
+              <template id="cart-item-template">
+                <div class="group flex items-center gap-6 bg-surface-container-lowest p-5 rounded-lg shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] transition-all hover:shadow-[0_20px_50px_-20px_rgba(0,0,0,0.1)]">
+                  <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
+                    <img class="w-full h-full object-cover" data-cart-item-image />
+                  </div>
+                  <div class="flex-grow">
+                    <div class="flex justify-between items-start">
+                      <div>
+                        <h4 class="font-headline font-bold text-primary text-lg" data-cart-item-title></h4>
+                        <p class="text-on-surface-variant text-sm font-medium" data-cart-item-subtitle></p>
+                      </div>
+                      <span class="font-headline font-bold text-primary" data-cart-item-price></span>
+                    </div>
+                    <div class="flex items-center justify-between mt-4">
+                      <div class="flex items-center bg-surface-container-low rounded-full px-2 py-1">
+                        <button class="p-1 text-primary hover:bg-surface-variant rounded-full transition-colors" type="button" data-action="qty-dec">
+                          <span class="material-symbols-outlined text-sm">remove</span>
+                        </button>
+                        <span class="px-4 font-bold text-sm" data-cart-item-qty></span>
+                        <button class="p-1 text-primary hover:bg-surface-variant rounded-full transition-colors" type="button" data-action="qty-inc">
+                          <span class="material-symbols-outlined text-sm">add</span>
+                        </button>
+                      </div>
+                      <button class="text-error font-bold text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity" type="button" data-action="remove-item">
+                        O‘chirish
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </template>
             </div>
 
             <aside class="w-full lg:w-96 flex-shrink-0">
               <div class="bg-primary p-8 rounded-lg text-white shadow-2xl sticky top-24">
-                <h3 class="font-headline font-bold text-2xl mb-8">Summary</h3>
+                <h3 class="font-headline font-bold text-2xl mb-8">Hisob</h3>
                 <div class="space-y-4 mb-8">
                   <div class="flex justify-between text-on-primary-container font-medium">
-                    <span>Subtotal</span>
-                    <span>440,000 UZS</span>
+                    <span>Oraliq summa</span>
+                    <span id="summary-subtotal">0 UZS</span>
                   </div>
                   <div class="flex justify-between text-on-primary-container font-medium">
-                    <span>Nutrition Service Fee</span>
-                    <span>0 UZS</span>
+                    <span>Xizmat</span>
+                    <span id="summary-fee">0 UZS</span>
                   </div>
                   <div class="pt-4 border-t border-white/10 flex justify-between items-baseline">
-                    <span class="font-headline font-bold text-lg">Total Cost</span>
-                    <span class="font-headline font-extrabold text-2xl">440,000 UZS</span>
+                    <span class="font-headline font-bold text-lg">Jami</span>
+                    <span class="font-headline font-extrabold text-2xl" id="summary-total">0 UZS</span>
                   </div>
                 </div>
                 <button class="w-full bg-secondary-container text-primary font-headline font-bold py-4 rounded-full text-lg hover:scale-[1.02] transition-transform active:scale-95 shadow-xl" type="button">
-                  Checkout
+                  Buyurtma berish
                 </button>
                 <div class="mt-8 p-4 bg-white/5 rounded-lg border border-white/10">
                   <div class="flex items-start gap-3">
                     <span class="material-symbols-outlined text-secondary-container">lightbulb</span>
                     <p class="text-sm font-medium leading-relaxed">
-                      <span class="text-secondary-container font-bold">Motivational Tip:</span>
-                      You're 200g of protein away from your daily goal! Keep going.
+                      <span class="text-secondary-container font-bold">Maslahat:</span>
+                      Kunlik maqsadga ozgina qoldi — davom eting.
                     </p>
                   </div>
                 </div>
@@ -692,28 +722,175 @@
     >
       <a class="bottom-link flex flex-col items-center justify-center text-[#444844] px-6 py-2 hover:bg-[#f3f4f3] rounded-full transition-all duration-300" href="#home" data-target="home">
         <span class="material-symbols-outlined">home</span>
-        <span class="font-['Manrope'] font-medium text-[11px]">Home</span>
+        <span class="font-['Manrope'] font-medium text-[11px]">Bosh</span>
       </a>
       <a class="bottom-link flex flex-col items-center justify-center text-[#444844] px-6 py-2 hover:bg-[#f3f4f3] rounded-full transition-all duration-300" href="#menu" data-target="menu">
         <span class="material-symbols-outlined">restaurant_menu</span>
-        <span class="font-['Manrope'] font-medium text-[11px]">Menu</span>
+        <span class="font-['Manrope'] font-medium text-[11px]">Menyu</span>
       </a>
       <a class="bottom-link flex flex-col items-center justify-center text-[#444844] px-6 py-2 hover:bg-[#f3f4f3] rounded-full transition-all duration-300" href="#meal" data-target="meal">
         <span class="material-symbols-outlined">nutrition</span>
-        <span class="font-['Manrope'] font-medium text-[11px]">Meal</span>
+        <span class="font-['Manrope'] font-medium text-[11px]">Taom</span>
       </a>
       <a class="bottom-link flex flex-col items-center justify-center text-[#444844] px-6 py-2 hover:bg-[#f3f4f3] rounded-full transition-all duration-300" href="#cart" data-target="cart">
         <span class="material-symbols-outlined">shopping_bag</span>
-        <span class="font-['Manrope'] font-medium text-[11px]">Cart</span>
+        <span class="font-['Manrope'] font-medium text-[11px]">Savat</span>
       </a>
     </nav>
 
     <script>
       const VIEW_IDS = ["home", "menu", "meal", "cart"];
+      const PRODUCTS = {
+        salmon: {
+          id: "salmon",
+          title: "Gril losos va asparagus",
+          subtitle: "450 kcal • 42g protein",
+          price: 75000,
+          image:
+            "https://lh3.googleusercontent.com/aida-public/AB6AXuAyCm_2k3UkfU7CtNcbyibmTjYWUGPIgz9sHESfeD58FU9QKH5M-m80vgAg9aqJKUYRF6uyAemqpNZHBe8uTaCC4hlGtt4D48BFP13sc2b5oWJV8I9NewLvIiaf_nR6k1lJHZ2lK3dPnvGVeHCMK1-jSdXMi9oZhxlu-qOY_cE9CuhNDyLlRWA0eVQb2vFORNoLHu-nkkYRLuFdYZb2k27ksBlV55DXzKiIsx5u0-7yCTh7mTuzEWmLkLtD436nrh2ulwscUo4FBYM",
+        },
+        bowl: {
+          id: "bowl",
+          title: "Mediterranean power bowl",
+          subtitle: "380 kcal • 18g protein",
+          price: 52000,
+          image:
+            "https://lh3.googleusercontent.com/aida-public/AB6AXuBJzphZ3wcCAId9ZeKX_yFh02bwDV8HdTuD9hJUMAY9NkGKJi05NJxJq0cGho880yRFeV1SU_6cZ6OMY2NhJjzOwC-Pj08SDxuZQCE7_7P0Q9-wyIYbx2OJsnOsBnPdlkfr7vuNSJ5FmDZEQGVryooyun5zhrLchk8g5SQf8hgXSqDoW6Hr8NGqZLBbKStZbJ5fnC_lLPj9U7orbRNdAGNHIEmijx4sXFUVxjq-EJUNIZv7Rw0tMOI5vDbmRfr_t3PEYwHcXVc6AYA",
+        },
+        steak: {
+          id: "steak",
+          title: "Grass-fed ribeye",
+          subtitle: "520 kcal • 55g protein",
+          price: 115000,
+          image:
+            "https://lh3.googleusercontent.com/aida-public/AB6AXuDq8SRtc8uJwXvma3RN1vopmrR1JIAGgkyVMz1OSOuBJkDjZq_I6iWzvwkxYwP4fUGhfeC4DE8GF7h5odm5qhWaH8zSS8NcdSl2NbnMk2XmpFOnF_TxPrGf2HhKdx88L46HkEsiogVKAjRFuxp9mOswg8wmlvHVgmAUUAYJtvhXWB8usEol6XzGV4cZEW9inh50a-rTWxheXa42RoHYYs-PN7Rmvdxk2QXuLHKfEnPXcxbEH-gybNYgHM-tAsoJJAzrwZz5RmKLSD4",
+        },
+      };
+      const STORAGE_KEY = "azgu.cart.v1";
 
       function getHashView() {
         const raw = (location.hash || "#home").replace("#", "").trim();
         return VIEW_IDS.includes(raw) ? raw : "home";
+      }
+
+      function formatUzs(amount) {
+        try {
+          return new Intl.NumberFormat("uz-UZ").format(amount) + " UZS";
+        } catch {
+          return String(amount) + " UZS";
+        }
+      }
+
+      function loadCart() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          const parsed = raw ? JSON.parse(raw) : {};
+          if (!parsed || typeof parsed !== "object") return {};
+          return parsed;
+        } catch {
+          return {};
+        }
+      }
+
+      function saveCart(cart) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
+      }
+
+      function cartCount(cart) {
+        return Object.values(cart).reduce((sum, n) => sum + (Number(n) || 0), 0);
+      }
+
+      function addToCart(productId, qty = 1) {
+        const cart = loadCart();
+        cart[productId] = (Number(cart[productId]) || 0) + qty;
+        if (cart[productId] <= 0) delete cart[productId];
+        saveCart(cart);
+        renderCartUI();
+      }
+
+      function setQty(productId, qty) {
+        const cart = loadCart();
+        const next = Math.max(0, Number(qty) || 0);
+        if (next <= 0) delete cart[productId];
+        else cart[productId] = next;
+        saveCart(cart);
+        renderCartUI();
+      }
+
+      function renderBadges() {
+        const cart = loadCart();
+        const count = cartCount(cart);
+        const desktop = document.getElementById("cart-badge-desktop");
+        const fab = document.getElementById("cart-badge-fab");
+        const value = count > 99 ? "99+" : String(count);
+
+        if (desktop) {
+          desktop.textContent = value;
+          desktop.classList.toggle("hidden", count === 0);
+        }
+        if (fab) {
+          fab.textContent = value;
+          fab.classList.toggle("hidden", count === 0);
+        }
+      }
+
+      function renderCartItems() {
+        const container = document.getElementById("cart-items");
+        const empty = document.getElementById("cart-empty");
+        const tmpl = document.getElementById("cart-item-template");
+        if (!container || !empty || !tmpl) return;
+
+        container.innerHTML = "";
+        const cart = loadCart();
+        const entries = Object.entries(cart).filter(([, qty]) => (Number(qty) || 0) > 0);
+
+        empty.classList.toggle("hidden", entries.length !== 0);
+
+        for (const [productId, qtyRaw] of entries) {
+          const product = PRODUCTS[productId];
+          if (!product) continue;
+          const qty = Number(qtyRaw) || 0;
+
+          const node = tmpl.content.firstElementChild.cloneNode(true);
+          node.setAttribute("data-product-id", productId);
+
+          const img = node.querySelector("[data-cart-item-image]");
+          img.src = product.image;
+          img.alt = product.title;
+
+          node.querySelector("[data-cart-item-title]").textContent = product.title;
+          node.querySelector("[data-cart-item-subtitle]").textContent = product.subtitle;
+          node.querySelector("[data-cart-item-price]").textContent = formatUzs(product.price);
+          node.querySelector("[data-cart-item-qty]").textContent = String(qty);
+
+          container.appendChild(node);
+        }
+      }
+
+      function renderSummary() {
+        const cart = loadCart();
+        let subtotal = 0;
+        for (const [productId, qtyRaw] of Object.entries(cart)) {
+          const qty = Number(qtyRaw) || 0;
+          const product = PRODUCTS[productId];
+          if (!product || qty <= 0) continue;
+          subtotal += product.price * qty;
+        }
+        const fee = 0;
+        const total = subtotal + fee;
+
+        const subtotalEl = document.getElementById("summary-subtotal");
+        const feeEl = document.getElementById("summary-fee");
+        const totalEl = document.getElementById("summary-total");
+        if (subtotalEl) subtotalEl.textContent = formatUzs(subtotal);
+        if (feeEl) feeEl.textContent = formatUzs(fee);
+        if (totalEl) totalEl.textContent = formatUzs(total);
+      }
+
+      function renderCartUI() {
+        renderBadges();
+        renderCartItems();
+        renderSummary();
       }
 
       function setActiveLinks(viewId) {
@@ -748,9 +925,34 @@
           el.setAttribute("aria-hidden", String(!active));
         }
         setActiveLinks(viewId);
+        if (viewId === "cart") renderCartUI();
       }
 
       window.addEventListener("hashchange", () => showView(getHashView()));
+      document.addEventListener("click", (e) => {
+        const btn = e.target.closest("[data-action]");
+        if (!btn) return;
+        const action = btn.getAttribute("data-action");
+        const productId = btn.getAttribute("data-product-id");
+
+        if (action === "add-to-cart" && productId) {
+          addToCart(productId, 1);
+          location.hash = "#cart";
+          return;
+        }
+
+        const item = btn.closest("[data-product-id]");
+        const itemProductId = item ? item.getAttribute("data-product-id") : null;
+        if (!itemProductId) return;
+
+        const cart = loadCart();
+        const current = Number(cart[itemProductId]) || 0;
+        if (action === "qty-inc") setQty(itemProductId, current + 1);
+        if (action === "qty-dec") setQty(itemProductId, current - 1);
+        if (action === "remove-item") setQty(itemProductId, 0);
+      });
+
+      renderCartUI();
       showView(getHashView());
     </script>
   </body>
