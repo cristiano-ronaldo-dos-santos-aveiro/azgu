@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Smart Cart | AZGU Nutrition Plan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800;900&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#364d29",
+                        "secondary-container": "#bbf244",
+                        "surface-tint": "#436556",
+                        "secondary-fixed": "#bdf447",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#8da77b",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#122606",
+                        "surface": "#f9f9f8",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#c1c8c2",
+                        "surface-bright": "#f9f9f8",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#2c4d3f",
+                        "on-surface-variant": "#414844",
+                        "on-background": "#191c1c",
+                        "tertiary-fixed-dim": "#b4cf9f",
+                        "primary": "#03271a",
+                        "secondary": "#4a6700",
+                        "on-primary-container": "#84a895",
+                        "surface-container-low": "#f3f4f3",
+                        "surface-variant": "#e1e3e2",
+                        "primary-fixed-dim": "#aacfbb",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#141f00",
+                        "error": "#ba1a1a",
+                        "background": "#f9f9f8",
+                        "primary-container": "#1b3d2f",
+                        "surface-container-highest": "#e1e3e2",
+                        "inverse-primary": "#aacfbb",
+                        "surface-container": "#edeeed",
+                        "on-secondary-fixed-variant": "#374e00",
+                        "on-surface": "#191c1c",
+                        "primary-fixed": "#c5ebd7",
+                        "on-secondary-container": "#4e6c00",
+                        "on-secondary": "#ffffff",
+                        "outline": "#727974",
+                        "on-tertiary-fixed": "#0c2003",
+                        "on-primary-fixed": "#002115",
+                        "surface-dim": "#d9dad9",
+                        "surface-container-high": "#e7e8e7",
+                        "inverse-on-surface": "#f0f1f0",
+                        "secondary-fixed-dim": "#a2d729",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#2e3131",
+                        "tertiary-container": "#263c1a",
+                        "tertiary-fixed": "#cfebba"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Lexend"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        .tap-highlight-transparent { -webkit-tap-highlight-color: transparent; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f9f9f8]/80 dark:bg-[#191c1c]/80 backdrop-blur-xl shadow-[0_10px_40px_-15px_rgba(25,28,28,0.06)] flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#03271a] dark:text-[#bbf244]">menu</span>
+<h1 class="text-xl font-black text-[#03271a] dark:text-[#f9f9f8] tracking-tighter">AZGU Nutrition Plan</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="font-['Lexend'] font-bold tracking-tight text-lg text-[#03271a] dark:text-[#bbf244] hover:opacity-80 transition-opacity">ENG</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-5xl mx-auto">
+<!-- Dashboard: Order Nutrition Tracker -->
+<section class="mb-10">
+<div class="flex items-end justify-between mb-6">
+<div>
+<h2 class="font-headline font-bold text-3xl tracking-tight text-primary">Smart Cart Dashboard</h2>
+<p class="text-on-surface-variant font-medium">Real-time daily plan optimization</p>
+</div>
+<div class="hidden md:block">
+<span class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full font-bold text-sm">
+<span class="material-symbols-outlined text-sm">bolt</span>
+                        OPTIMIZED FOR PERFORMANCE
+                    </span>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Calories Card -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-[0_10px_40px_rgba(25,28,28,0.03)] border-b-4 border-primary">
+<p class="font-label text-xs font-bold uppercase tracking-widest text-outline mb-1">Calories</p>
+<div class="flex items-baseline gap-1">
+<span class="font-headline text-3xl font-extrabold text-primary">1,840</span>
+<span class="text-outline text-sm font-medium">kcal</span>
+</div>
+<div class="mt-4 h-1.5 w-full bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[72%]"></div>
+</div>
+</div></div></section>
+<!-- Protein Card -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-[0_10px_40px_rgba(25,28,28,0.03)] border-b-4 border-secondary">
+<p class="font-label text-xs font-bold uppercase tracking-widest text-outline mb-1">Protein</p>
+<div class="flex items-baseline gap-1">
+<span class="font-headline text-3xl font-extrabold text-primary">142</span>
+<span class="text-outline text-sm font-medium">g</span>
+</div>
+<div class="mt-4 h-1.5 w-full bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full w-[65%]"></div>
+</div>
+</div>
+<!-- Fat Card -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-[0_10px_40px_rgba(25,28,28,0.03)] border-b-4 border-primary-fixed-dim">
+<p class="font-label text-xs font-bold uppercase tracking-widest text-outline mb-1">Fat</p>
+<div class="flex items-baseline gap-1">
+<span class="font-headline text-3xl font-extrabold text-primary">56</span>
+<span class="text-outline text-sm font-medium">g</span>
+</div>
+<div class="mt-4 h-1.5 w-full bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-primary-fixed-dim rounded-full w-[45%]"></div>
+</div>
+</div>
+<!-- Carbs Card -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-[0_10px_40px_rgba(25,28,28,0.03)] border-b-4 border-tertiary-fixed-dim">
+<p class="font-label text-xs font-bold uppercase tracking-widest text-outline mb-1">Carbs</p>
+<div class="flex items-baseline gap-1">
+<span class="font-headline text-3xl font-extrabold text-primary">192</span>
+<span class="text-outline text-sm font-medium">g</span>
+</div>
+<div class="mt-4 h-1.5 w-full bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-fixed-dim rounded-full w-[88%]"></div>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row gap-10">
+<!-- Cart Items List -->
+<div class="flex-grow space-y-6">
+<h3 class="font-headline text-xl font-bold text-primary">Your Selection</h3>
+<!-- Item 1 -->
+<div class="group flex items-center gap-6 bg-surface-container-lowest p-5 rounded-lg shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] transition-all hover:shadow-[0_20px_50px_-20px_rgba(0,0,0,0.1)]">
+<div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Gourmet grilled salmon with asparagus and quinoa in a premium ceramic bowl with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA94hgG9vOVPzQf21iPcOriwAeM8x8--vcjM69ludVAN2svWfToLe7QI0GvX4y06U4aG_Z8cBJMebYuLvIQNQ2WyKyd_2RxyAwVMXtnZuQ9iEcAQBQ2UlhrTsNRgaU6ChH6756tg--m3HjWIdarzQAiFPl_Lrk-MkUT1do4Nys6y1cjQW8QOVrWgwmgYgiisXO6RfncE3fBgVtMm0_0B6E9BdDMMPHM-j1GtRodeu1d4yEvvuEi1gISaRDmnzdO8s-93iTKUI2XnM"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline font-bold text-primary text-lg">Omega Grilled Salmon</h4>
+<p class="text-on-surface-variant text-sm font-medium">540 kcal • 42g Protein</p>
+</div>
+<span class="font-headline font-bold text-primary">120,000 UZS</span>
+</div>
+<div class="flex items-center justify-between mt-4">
+<div class="flex items-center bg-surface-container-low rounded-full px-2 py-1">
+<button class="p-1 text-primary hover:bg-surface-variant rounded-full transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="px-4 font-bold text-sm">2</span>
+<button class="p-1 text-primary hover:bg-surface-variant rounded-full transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="text-error font-bold text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">Remove</button>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="group flex items-center gap-6 bg-surface-container-lowest p-5 rounded-lg shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] transition-all hover:shadow-[0_20px_50px_-20px_rgba(0,0,0,0.1)]">
+<div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Vibrant Mediterranean salad bowl with chickpeas, feta, and fresh kale with high-end editorial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-HUhRY51e_QD55neaIO3dU36weUuTV0pTDPZhUSXXgzAmIGHD_vyPXbFJpxpukwikSbzitmOsDnUqd_q79Jr6GfynQ1Ww5nC14_n69z_UYo0X8dckH4o4QQ6cIArgon42QspIeBDPIRnha1RVJkwwcZfDc49wVPOL2eO8HHRg6ncvcRTg7-sA1ooG6M3qx7d9lRvZbJZV9tpDeB_eCC94CwH1N4Q4DKY2QcEXZxvSDvkL4IelnBR0pFoAUV2JCW30a1u3xG36-LE"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline font-bold text-primary text-lg">Precision Greens Bowl</h4>
+<p class="text-on-surface-variant text-sm font-medium">320 kcal • 12g Protein</p>
+</div>
+<span class="font-headline font-bold text-primary">65,000 UZS</span>
+</div>
+<div class="flex items-center justify-between mt-4">
+<div class="flex items-center bg-surface-container-low rounded-full px-2 py-1">
+<button class="p-1 text-primary hover:bg-surface-variant rounded-full transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="px-4 font-bold text-sm">1</span>
+<button class="p-1 text-primary hover:bg-surface-variant rounded-full transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="text-error font-bold text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">Remove</button>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="group flex items-center gap-6 bg-surface-container-lowest p-5 rounded-lg shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] transition-all hover:shadow-[0_20px_50px_-20px_rgba(0,0,0,0.1)]">
+<div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Protein rich energy bowl with nuts, seeds, and berries on a clean white background with minimal styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWlpv-ZEXWRZI2VaJ44_n7XebAB2XdMVf9gPGeqLYhsQ0Vo_WDlpURRM9RQOLIKcIP87I9i-lwyPmNv903QGwuTQJ1OBvPm5H3-D2Pz3eBPz3LwOMFgdn-0wXO1OC4J_lLZSVbYCGPv48GFjk7FUdS488Q4ooTH8uxO0Jdx6_bQLYftF2IBQwzIslbEGmofpnQokxzQJVkNzyd0lJiBCQ0q85yf0GSX95B3BeCUGESOvFC371SqLZMI0v6yFta4CL9CCf6DpErlS8"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline font-bold text-primary text-lg">AZGU Power Pot</h4>
+<p class="text-on-surface-variant text-sm font-medium">210 kcal • 18g Protein</p>
+</div>
+<span class="font-headline font-bold text-primary">45,000 UZS</span>
+</div>
+<div class="flex items-center justify-between mt-4">
+<div class="flex items-center bg-surface-container-low rounded-full px-2 py-1">
+<button class="p-1 text-primary hover:bg-surface-variant rounded-full transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="px-4 font-bold text-sm">3</span>
+<button class="p-1 text-primary hover:bg-surface-variant rounded-full transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="text-error font-bold text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">Remove</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Checkout Summary Card -->
+<aside class="w-full lg:w-96 flex-shrink-0">
+<div class="bg-primary p-8 rounded-lg text-white shadow-2xl sticky top-24">
+<h3 class="font-headline font-bold text-2xl mb-8">Summary</h3>
+<div class="space-y-4 mb-8">
+<div class="flex justify-between text-on-primary-container font-medium">
+<span>Subtotal</span>
+<span>440,000 UZS</span>
+</div>
+<div class="flex justify-between text-on-primary-container font-medium">
+<span>Nutrition Service Fee</span>
+<span>0 UZS</span>
+</div>
+<div class="pt-4 border-t border-white/10 flex justify-between items-baseline">
+<span class="font-headline font-bold text-lg">Total Cost</span>
+<span class="font-headline font-extrabold text-2xl">440,000 UZS</span>
+</div>
+</div>
+<button class="w-full bg-secondary-container text-primary font-headline font-bold py-4 rounded-full text-lg hover:scale-[1.02] transition-transform active:scale-95 shadow-xl">
+                        Checkout
+                    </button>
+<div class="mt-8 p-4 bg-white/5 rounded-lg border border-white/10">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary-container">lightbulb</span>
+<p class="text-sm font-medium leading-relaxed">
+<span class="text-secondary-container font-bold">Motivational Tip:</span> 
+                                You're 200g of protein away from your daily goal! Keep going.
+                            </p>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full rounded-t-[2rem] z-50 bg-[#ffffff] dark:bg-[#191c1c] shadow-[0_-10px_40px_rgba(25,28,28,0.06)] flex justify-around items-center h-20 px-4 pb-2 w-full md:hidden">
+<div class="flex flex-col items-center justify-center text-[#444844] dark:text-[#c1c8c2] px-6 py-2 transition-all duration-300">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Manrope'] font-medium text-[11px]">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-[#bbf244] text-[#03271a] rounded-full px-6 py-2 transition-all duration-300">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="font-['Manrope'] font-medium text-[11px]">Menu</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#444844] dark:text-[#c1c8c2] px-6 py-2 transition-all duration-300">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Manrope'] font-medium text-[11px]">Profile</span>
+</div>
+</nav>
+</body></html>

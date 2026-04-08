@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AZGU Nutrition Plan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800;900&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#364d29",
+                        "secondary-container": "#bbf244",
+                        "surface-tint": "#436556",
+                        "secondary-fixed": "#bdf447",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#8da77b",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#122606",
+                        "surface": "#f9f9f8",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#c1c8c2",
+                        "surface-bright": "#f9f9f8",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#2c4d3f",
+                        "on-surface-variant": "#414844",
+                        "on-background": "#191c1c",
+                        "tertiary-fixed-dim": "#b4cf9f",
+                        "primary": "#03271a",
+                        "secondary": "#4a6700",
+                        "on-primary-container": "#84a895",
+                        "surface-container-low": "#f3f4f3",
+                        "surface-variant": "#e1e3e2",
+                        "primary-fixed-dim": "#aacfbb",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#141f00",
+                        "error": "#ba1a1a",
+                        "background": "#f9f9f8",
+                        "primary-container": "#1b3d2f",
+                        "surface-container-highest": "#e1e3e2",
+                        "inverse-primary": "#aacfbb",
+                        "surface-container": "#edeeed",
+                        "on-secondary-fixed-variant": "#374e00",
+                        "on-surface": "#191c1c",
+                        "primary-fixed": "#c5ebd7",
+                        "on-secondary-container": "#4e6c00",
+                        "on-secondary": "#ffffff",
+                        "outline": "#727974",
+                        "on-tertiary-fixed": "#0c2003",
+                        "on-primary-fixed": "#002115",
+                        "surface-dim": "#d9dad9",
+                        "surface-container-high": "#e7e8e7",
+                        "inverse-on-surface": "#f0f1f0",
+                        "secondary-fixed-dim": "#a2d729",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#2e3131",
+                        "tertiary-container": "#263c1a",
+                        "tertiary-fixed": "#cfebba"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Lexend"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Manrope', sans-serif; background-color: #f9f9f8; color: #191c1c; }
+        h1, h2, h3 { font-family: 'Lexend', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<header class="fixed top-0 w-full z-50 bg-[#f9f9f8]/80 backdrop-blur-xl shadow-[0_10px_40px_-15px_rgba(25,28,28,0.06)] flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#03271a] cursor-pointer">menu</span>
+<span class="text-xl font-black text-[#03271a] tracking-tighter">AZGU Nutrition Plan</span>
+</div>
+<div class="hidden md:flex gap-8 items-center font-['Lexend'] font-bold tracking-tight text-lg">
+<a class="text-[#03271a] font-bold" href="#">Home</a>
+<a class="text-[#4a6700] hover:opacity-80 transition-opacity" href="#">Menu</a>
+<a class="text-[#4a6700] hover:opacity-80 transition-opacity" href="#">Profile</a>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-low rounded-full px-3 py-1">
+<span class="text-xs font-bold text-[#03271a]">ENG</span>
+<span class="text-xs text-outline opacity-40">|</span>
+<span class="text-xs font-medium text-outline">UZ</span>
+<span class="text-xs text-outline opacity-40">|</span>
+<span class="text-xs font-medium text-outline">RU</span>
+</div>
+</header>
+<main class="pt-16 pb-24">
+<section class="relative px-6 py-12 md:py-24 overflow-hidden">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1 space-y-6 z-10">
+<img alt="AZGU Logo" class="h-16 w-auto" data-alt="minimalist and bold nutrition brand logo with sharp geometric typography in dark forest green" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBhgVWv6KpUbY8sj-6OksVg3QV1EtDXq89nCO5D7Da1picMV6OgOH-dec-TmWkc83HdcpDY38iE7xdYBFN56JMG9VageqdpHE5SX4dSJnR9-lHx_E6qNxpOsjQwBfs3ZspNVaYv7yhMSlkCxbVUU6Cw9V8NhVtfbPONmzypOIxP1gFGbgLB2cE7VBgOGKqaoS-G5ialxXMZ6oYXKyz9e4ilKhXV4erwNsi5x5wTN54nnnleiWGPSkDsR8wui-qGmU1C1X1c1xBveY"/>
+<h1 class="text-5xl md:text-7xl font-black tracking-tight leading-none text-primary">
+                        Precision Nutrition <br/>for Your <span class="text-secondary">Peak Performance.</span>
+</h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-lg font-medium">
+                        Chef-prepared meals with real-time tracking for your fitness goals. Designed by scientists, prepared by masters.
+                    </p>
+<div class="pt-4">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-primary/20 transition-all active:scale-95">
+                            Explore the Menu
+                        </button>
+</div>
+</div>
+<div class="flex-1 relative">
+<div class="absolute -top-10 -right-10 w-64 h-64 bg-secondary-container rounded-full blur-[80px] opacity-30"></div>
+<div class="relative rounded-lg overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
+<img alt="Healthy Bowl" class="w-full aspect-[4/5] object-cover" data-alt="vibrant gourmet healthy poke bowl with fresh salmon, avocado, edamame and black rice on a dark slate background with dramatic top lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByYsHgCBNpLu2vaBjGK0JoHqTaNl_wOQcwz-CxYX7tl4fAJtyf-jvNMqIjfC7RCkHleOae6-SclwTncwGdjWnVq5rG7zlCtGTni63n5V1IanRwaX0vhfv2zHMNacfl-JEzLh9Hpjixw9SH_PvJq4_1pBDRjo7BP5GVNifo2qHSJ5CWY-WTcZKppHDfTzmC3rqL-q9-wlvFIBQuHJik008-ssI5Ps9ZLkRwDpcr3lkefE3eTO5HtnQbh5NO3foEShCJv-enZFBYvj0"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-lg shadow-xl max-w-[200px]">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">monitoring</span>
+<span class="text-xs font-bold uppercase tracking-wider text-outline">Live Tracking</span>
+</div>
+<p class="text-sm font-semibold">98% Accuracy in Macro-Tracking</p>
+</div>
+</div>
+</div>
+</section>
+<section class="px-6 py-16 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-3xl font-bold text-primary">Featured Meals</h2>
+<p class="text-on-surface-variant">Selected by our nutritionists for this week's performance</p>
+</div>
+<a class="text-secondary font-bold flex items-center gap-1 group" href="#">
+                        View All <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 group">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="seared wild salmon fillet with asparagus and lemon zest garnish on a clean white plate editorial food photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAik7C6d5DSzhIveDfIQTsv2BUjHs-hUVezOYLlQ45fvaFutXF12488CZ5g6Cb0Y3_G8ZN7xxyEhOB0t1QKGSXNO7WjJvoZHlVh_bUttkX1_zSGir3g5xZ4QOHBpqx-tTT_wJrZY4-6aDJ64ycuH_ux5I5AwEsJLrq_AenEa0kAIrOA6UtG6TLiomv5xQOg8FKMsykoumi1fJr-LYfXBaU8bJHcVwYdzjcVEM0EYvK4Yfhi8-7DPsHviGZDlQ7JdhL9RyRqX2KmN2I"/>
+<div class="absolute top-4 right-4 bg-secondary-container text-primary px-3 py-1 rounded-full text-xs font-bold">
+                                480 kcal
+                            </div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-1">Atlantic Salmon Bliss</h3>
+<p class="text-sm text-on-surface-variant mb-4">High Omega-3, rich in lean protein and micro-greens.</p>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-black text-primary">$18.50</span>
+<button class="p-2 rounded-full bg-surface-container hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 group">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="colorful mediterranean power bowl with quinoa roasted vegetables and hummus spread bright natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdiPrLs73PFtJ9YvSSGKPR_9f_E_l59TLy0FOFK4crrEKmaou2F7-ReR_zIEZ2OwVfaub1jMOMVXE5YCMakzCIq1Y68-jqQqiiINfy3HsDQyBPTQlcS_kRBgjG6DzNLZE37HfSQ5YYmrxf25h8KL0T2pvyeHZs_VonFYvciW9UIVZVTauOhkCsjGDNyj8Y0nDyOJ7MYmX2NgaiUbxZ3z4AdixBQWZjilKP6q2Qzh3LmPVW4tRbmaqYIgaH-it3Z47pkKCzMT_lkeo"/>
+<div class="absolute top-4 right-4 bg-secondary-container text-primary px-3 py-1 rounded-full text-xs font-bold">
+                                320 kcal
+                            </div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-1">Quinoa Power Bowl</h3>
+<p class="text-sm text-on-surface-variant mb-4">Plant-based complex carbs for sustained energy.</p>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-black text-primary">$14.20</span>
+<button class="p-2 rounded-full bg-surface-container hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 group">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="tender sous-vide beef strips with broccoli and brown rice garnish clean plated fitness meal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJRHLth54OZKMTNq_6ETGGZHbtduUU9l_zsF65dxi-dNO3mqi_VqFHX1X0TdhEu-qpY9WElsVo3V9vMxeiQ_SWEN8Ax2KZp9r8qX01lBTeeCLwHutSS3-49dxPK8QyJzC0FAheT7v0n6nCWtftKZv6S0WJdmQBkWXFpHxM0WUFVD_5lB0SDD-3YDo6dNzIWLPKWZ_DKNv2-da-07_1nOd5zybm5jWrxdVoQSy8Es3QBtivgVDGy4sHdP8jWKgf9E0FtaQt67jD0tk"/>
+<div class="absolute top-4 right-4 bg-secondary-container text-primary px-3 py-1 rounded-full text-xs font-bold">
+                                610 kcal
+                            </div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-1">Prime Beef &amp; Broccoli</h3>
+<p class="text-sm text-on-surface-variant mb-4">High protein content for optimal muscle recovery.</p>
+<div class="flex justify-between items-center">
+<span class="text-2xl font-black text-primary">$21.00</span>
+<button class="p-2 rounded-full bg-surface-container hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="px-6 py-16">
+<div class="max-w-7xl mx-auto">
+<div class="bg-primary-container rounded-lg p-8 md:p-12 relative overflow-hidden flex flex-col md:flex-row items-center gap-8">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0 100 L100 0 L100 100 Z" fill="white"></path>
+</svg>
+</div>
+<div class="relative z-10 bg-secondary-container/10 p-6 rounded-full">
+<span class="material-symbols-outlined text-secondary-container text-5xl" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+</div>
+<div class="relative z-10 space-y-2 text-center md:text-left">
+<h4 class="text-secondary-container font-bold uppercase tracking-widest text-sm">Healthy Eating Tip</h4>
+<p class="text-white text-xl md:text-3xl font-semibold leading-tight max-w-2xl">
+                            "Did you know? Consistent protein intake supports muscle recovery and metabolic health."
+                        </p>
+</div>
+<div class="relative z-10 md:ml-auto">
+<button class="bg-secondary-container text-primary font-bold px-6 py-3 rounded-full whitespace-nowrap hover:scale-105 transition-transform">
+                            Learn More
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<nav class="md:hidden fixed bottom-0 w-full rounded-t-[2rem] z-50 bg-[#ffffff] shadow-[0_-10px_40px_rgba(25,28,28,0.06)] flex justify-around items-center h-20 px-4 pb-2">
+<a class="flex flex-col items-center justify-center bg-[#bbf244] text-[#03271a] rounded-full px-6 py-2 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Manrope'] font-medium text-[11px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#444844] px-6 py-2 hover:bg-[#f3f4f3] rounded-full transition-all duration-300" href="#">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="font-['Manrope'] font-medium text-[11px]">Menu</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#444844] px-6 py-2 hover:bg-[#f3f4f3] rounded-full transition-all duration-300" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Manrope'] font-medium text-[11px]">Profile</span>
+</a>
+</nav>
+</body></html>

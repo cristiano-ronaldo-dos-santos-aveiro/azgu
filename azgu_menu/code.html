@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AZGU Nutrition Plan - Product Catalog</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800;900&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#364d29",
+                        "secondary-container": "#bbf244",
+                        "surface-tint": "#436556",
+                        "secondary-fixed": "#bdf447",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#8da77b",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#122606",
+                        "surface": "#f9f9f8",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#c1c8c2",
+                        "surface-bright": "#f9f9f8",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#2c4d3f",
+                        "on-surface-variant": "#414844",
+                        "on-background": "#191c1c",
+                        "tertiary-fixed-dim": "#b4cf9f",
+                        "primary": "#03271a",
+                        "secondary": "#4a6700",
+                        "on-primary-container": "#84a895",
+                        "surface-container-low": "#f3f4f3",
+                        "surface-variant": "#e1e3e2",
+                        "primary-fixed-dim": "#aacfbb",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#141f00",
+                        "error": "#ba1a1a",
+                        "background": "#f9f9f8",
+                        "primary-container": "#1b3d2f",
+                        "surface-container-highest": "#e1e3e2",
+                        "inverse-primary": "#aacfbb",
+                        "surface-container": "#edeeed",
+                        "on-secondary-fixed-variant": "#374e00",
+                        "on-surface": "#191c1c",
+                        "primary-fixed": "#c5ebd7",
+                        "on-secondary-container": "#4e6c00",
+                        "on-secondary": "#ffffff",
+                        "outline": "#727974",
+                        "on-tertiary-fixed": "#0c2003",
+                        "on-primary-fixed": "#002115",
+                        "surface-dim": "#d9dad9",
+                        "surface-container-high": "#e7e8e7",
+                        "inverse-on-surface": "#f0f1f0",
+                        "secondary-fixed-dim": "#a2d729",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#2e3131",
+                        "tertiary-container": "#263c1a",
+                        "tertiary-fixed": "#cfebba"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Lexend"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f9f9f8]/80 backdrop-blur-xl shadow-[0_10px_40px_-15px_rgba(25,28,28,0.06)] flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#03271a] cursor-pointer hover:opacity-80 transition-opacity">menu</span>
+<h1 class="text-xl font-black text-[#03271a] tracking-tighter font-headline">AZGU Nutrition Plan</h1>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8">
+<a class="text-[#03271a] font-bold font-headline tracking-tight text-lg transition-opacity hover:opacity-80" href="#">Home</a>
+<a class="text-[#03271a] font-bold font-headline tracking-tight text-lg transition-opacity hover:opacity-80 underline underline-offset-8 decoration-[#bbf244] decoration-2" href="#">Menu</a>
+<a class="text-[#4a6700] font-headline tracking-tight text-lg transition-opacity hover:opacity-80" href="#">Profile</a>
+</nav>
+<button class="text-[#03271a] font-bold font-headline tracking-tight text-lg hover:opacity-80 transition-opacity">ENG</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
+<!-- Page Header & Hero Moment -->
+<section class="mb-12">
+<h2 class="font-headline font-extrabold text-5xl md:text-6xl text-primary tracking-tight mb-4">Daily Precision.</h2>
+<p class="text-on-surface-variant max-w-xl text-lg">Curated meal plans designed for peak performance, scientific accuracy, and culinary excellence.</p>
+</section>
+<!-- Filter Chips Container -->
+<section class="mb-10 overflow-x-auto hide-scrollbar -mx-6 px-6">
+<div class="flex gap-3 min-w-max">
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-headline font-semibold text-sm shadow-lg shadow-primary/10">All</button>
+<button class="bg-surface-container-low text-primary px-8 py-3 rounded-full font-headline font-semibold text-sm hover:bg-surface-container-high transition-colors">High Protein</button>
+<button class="bg-surface-container-low text-primary px-8 py-3 rounded-full font-headline font-semibold text-sm hover:bg-surface-container-high transition-colors">Low Carb</button>
+<button class="bg-surface-container-low text-primary px-8 py-3 rounded-full font-headline font-semibold text-sm hover:bg-surface-container-high transition-colors">Vegan</button>
+</div>
+</section>
+<!-- Product Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<article class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col group shadow-[0_10px_40px_-15px_rgba(25,28,28,0.06)] hover:translate-y-[-4px] transition-transform duration-300">
+<div class="relative h-64 overflow-hidden">
+<img alt="Grilled Salmon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Glistening grilled salmon fillet with charred asparagus spears and a lemon wedge on a minimalist ceramic plate with soft side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyCm_2k3UkfU7CtNcbyibmTjYWUGPIgz9sHESfeD58FU9QKH5M-m80vgAg9aqJKUYRF6uyAemqpNZHBe8uTaCC4hlGtt4D48BFP13sc2b5oWJV8I9NewLvIiaf_nR6k1lJHZ2lK3dPnvGVeHCMK1-jSdXMi9oZhxlu-qOY_cE9CuhNDyLlRWA0eVQb2vFORNoLHu-nkkYRLuFdYZb2k27ksBlV55DXzKiIsx5u0-7yCTh7mTuzEWmLkLtD436nrh2ulwscUo4FBYM"/>
+<div class="absolute top-4 left-4 bg-secondary-container/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-bold text-xs">HIGH PROTEIN</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline font-bold text-xl text-primary leading-tight">Grilled Salmon &amp; Asparagus</h3>
+<span class="font-headline font-extrabold text-primary text-lg">75,000 UZS</span>
+</div>
+<!-- KBJU Preview -->
+<div class="flex flex-wrap gap-4 mt-4 mb-6">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-outline font-bold">Cals</span>
+<span class="text-sm font-bold text-primary">450</span>
+</div>
+<div class="h-8 w-[1px] bg-outline-variant/15"></div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-outline font-bold">Prot</span>
+<span class="text-sm font-bold text-primary">42g</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-outline font-bold">Fat</span>
+<span class="text-sm font-bold text-primary">12g</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-outline font-bold">Carb</span>
+<span class="text-sm font-bold text-primary">15g</span>
+</div>
+</div>
+<button class="mt-auto w-full bg-primary text-on-primary rounded-full py-4 font-headline font-bold text-sm tracking-wide active:scale-95 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+                        Add to Cart
+                    </button>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col group shadow-[0_10px_40px_-15px_rgba(25,28,28,0.06)] hover:translate-y-[-4px] transition-transform duration-300">
+<div class="relative h-64 overflow-hidden">
+<img alt="Vegan Power Bowl" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Vibrant vegan bowl with quinoa, avocado slices, chickpeas, and fresh greens arranged artfully in a dark bowl with overhead soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJzphZ3wcCAId9ZeKX_yFh02bwDV8HdTuD9hJUMAY9NkGKJi05NJxJq0cGho880yRFeV1SU_6cZ6OMY2NhJjzOwC-Pj08SDxuZQCE7_7P0Q9-wyIYbx2OJsnOsBnPdlkfr7vuNSJ5FmDZEQGVryooyun5zhrLchk8g5SQf8hgXSqDoW6Hr8NGqZLBbKStZbJ5fnC_lLPj9U7orbRNdAGNHIEmijx4sXFUVxjq-EJUNIZv7Rw0tMOI5vDbmRfr_t3PEYwHcXVc6AYA"/>
+<div class="absolute top-4 left-4 bg-tertiary-fixed text-on-tertiary-fixed-variant px-3 py-1 rounded-full font-bold text-xs">VEGAN</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline font-bold text-xl text-primary leading-tight">Mediterranean Power Bowl</h3>
+<span class="font-headline font-extrabold text-primary text-lg">52,000 UZS</span>
+</div>
+<div class="flex flex-wrap gap-4 mt-4 mb-6">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-outline font-bold">Cals</span>
+<span class="text-sm font-bold text-primary">380</span>
+</div>
+<div class="h-8 w-[1px] bg-outline-variant/15"></div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-outline font-bold">Prot</span>
+<span class="text-sm font-bold text-primary">18g</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-outline font-bold">Fat</span>
+<span class="text-sm font-bold text-primary">14g</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-outline font-bold">Carb</span>
+<span class="text-sm font-bold text-primary">48g</span>
+</div>
+</div>
+<button class="mt-auto w-full bg-primary text-on-primary rounded-full py-4 font-headline font-bold text-sm tracking-wide active:scale-95 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+                        Add to Cart
+                    </button>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col group shadow-[0_10px_40px_-15px_rgba(25,28,28,0.06)] hover:translate-y-[-4px] transition-transform duration-300">
+<div class="relative h-64 overflow-hidden">
+<img alt="Herb Chicken" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Juicy herb-roasted chicken breast sliced on a bed of steamed broccoli with a drizzle of olive oil, bright and airy photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd1cU4qqlPcuN8zNwll3hhMzSwry6DpePK8Qyho-Yzu6elxl3v5PSSjgmPipPXSxil4Nn24bZfp-ryGYyVOTyY8AdtZV2Hg0PtvGrsM4wYuZU00ucGlxAePhjIJ33E-cw80F3ejaE8pfyDy8vWLnxKZbsgeIzMCz9B2SykTyB4wj0tinNIJcp1lPpYdAWM9YnNJMDMlwhfnOf4T6UY99McpJOiEQ52zkpRATJH-sm7Gpzgw2F8Yd0Gj8yf1oQpcnPcSEc8vA5eDrs"/>
+<div class="absolute top-4 left-4 bg-secondary-container/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-bold text-xs">LOW CARB</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline font-bold text-xl text-primary leading-tight">Lemon Herb Chicken Breast</h3>
+<span class="font-headline font-extrabold text-primary text-lg">68,000 UZS</span>
+</div>
+<div class="flex flex-wrap gap-4 mt-4 mb-6">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-outline font-bold">Cals</span>
+<span class="text-sm font-bold text-primary">410</span>
+</div>
+<div class="h-8 w-[1px] bg-outline-variant/15"></div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-outline font-bold">Prot</span>
+<span class="text-sm font-bold text-primary">45g</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-outline font-bold">Fat</span>
+<span class="text-sm font-bold text-primary">10g</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-outline font-bold">Carb</span>
+<span class="text-sm font-bold text-primary">8g</span>
+</div>
+</div>
+<button class="mt-auto w-full bg-primary text-on-primary rounded-full py-4 font-headline font-bold text-sm tracking-wide active:scale-95 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+                        Add to Cart
+                    </button>
+</div>
+</article>
+<!-- Card 4 (Asymmetric Offset Example) -->
+<article class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col group shadow-[0_10px_40px_-15px_rgba(25,28,28,0.06)] hover:translate-y-[-4px] transition-transform duration-300">
+<div class="relative h-64 overflow-hidden">
+<img alt="Beef Steak" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Premium grass-fed beef steak sliced with salt flakes and rosemary sprig on a dark slate background, moody high-contrast lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq8SRtc8uJwXvma3RN1vopmrR1JIAGgkyVMz1OSOuBJkDjZq_I6iWzvwkxYwP4fUGhfeC4DE8GF7h5odm5qhWaH8zSS8NcdSl2NbnMk2XmpFOnF_TxPrGf2HhKdx88L46HkEsiogVKAjRFuxp9mOswg8wmlvHVgmAUUAYJtvhXWB8usEol6XzGV4cZEW9inh50a-rTWxheXa42RoHYYs-PN7Rmvdxk2QXuLHKfEnPXcxbEH-gybNYgHM-tAsoJJAzrwZz5RmKLSD4"/>
+<div class="absolute top-4 left-4 bg-secondary-container/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-bold text-xs">PREMIUM</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline font-bold text-xl text-primary leading-tight">Grass-Fed Ribeye Steak</h3>
+<span class="font-headline font-extrabold text-primary text-lg">115,000 UZS</span>
+</div>
+<div class="flex flex-wrap gap-4 mt-4 mb-6">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-outline font-bold">Cals</span>
+<span class="text-sm font-bold text-primary">520</span>
+</div>
+<div class="h-8 w-[1px] bg-outline-variant/15"></div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-outline font-bold">Prot</span>
+<span class="text-sm font-bold text-primary">55g</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-outline font-bold">Fat</span>
+<span class="text-sm font-bold text-primary">28g</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-outline font-bold">Carb</span>
+<span class="text-sm font-bold text-primary">2g</span>
+</div>
+</div>
+<button class="mt-auto w-full bg-primary text-on-primary rounded-full py-4 font-headline font-bold text-sm tracking-wide active:scale-95 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+                        Add to Cart
+                    </button>
+</div>
+</article>
+</section>
+</main>
+<!-- Floating Action Button (Cart) -->
+<button class="fixed right-6 bottom-28 md:bottom-10 z-50 bg-[#bbf244] text-[#03271a] p-5 rounded-full shadow-[0_15px_30px_rgba(187,242,68,0.4)] flex items-center justify-center group active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-3xl">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary text-on-primary text-[10px] font-bold w-6 h-6 rounded-full flex items-center justify-center border-2 border-surface">3</span>
+</button>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full rounded-t-[2rem] z-50 bg-[#ffffff] shadow-[0_-10px_40px_rgba(25,28,28,0.06)] flex justify-around items-center h-20 px-4 pb-2 w-full">
+<div class="flex flex-col items-center justify-center text-[#444844] px-6 py-2 transition-all duration-300 hover:bg-[#f3f4f3] rounded-full">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Manrope'] font-medium text-[11px]">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-[#bbf244] text-[#03271a] rounded-full px-6 py-2 transition-all duration-300">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">restaurant_menu</span>
+<span class="font-['Manrope'] font-medium text-[11px]">Menu</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#444844] px-6 py-2 transition-all duration-300 hover:bg-[#f3f4f3] rounded-full">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Manrope'] font-medium text-[11px]">Profile</span>
+</div>
+</nav>
+</body></html>
