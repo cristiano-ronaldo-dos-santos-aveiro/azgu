@@ -111,6 +111,33 @@
       .tap-highlight-transparent {
         -webkit-tap-highlight-color: transparent;
       }
+      @media (prefers-reduced-motion: no-preference) {
+        .tap-press {
+          transition: transform 120ms ease, filter 120ms ease, opacity 120ms ease;
+          transform-origin: center;
+          will-change: transform;
+          touch-action: manipulation;
+          -webkit-tap-highlight-color: transparent;
+        }
+        .tap-press:active {
+          transform: scale(0.97);
+          filter: saturate(1.05);
+        }
+        .tap-press.tap-press--pulse {
+          animation: tapPulse 220ms ease-out;
+        }
+        @keyframes tapPulse {
+          0% {
+            transform: scale(0.97);
+          }
+          60% {
+            transform: scale(1.01);
+          }
+          100% {
+            transform: scale(1);
+          }
+        }
+      }
     </style>
   </head>
   <body class="bg-surface text-on-surface antialiased">
@@ -127,11 +154,11 @@
       </div>
 
       <nav class="hidden md:flex gap-8 items-center font-['Lexend'] font-bold tracking-tight text-lg">
-        <a class="nav-link text-[#4a6700] hover:opacity-80 transition-opacity" href="#home">Bosh sahifa</a>
-        <a class="nav-link text-[#4a6700] hover:opacity-80 transition-opacity" href="#menu">Menyu</a>
-        <a class="nav-link text-[#4a6700] hover:opacity-80 transition-opacity" href="#meal">Taom</a>
+        <a class="nav-link text-[#4a6700] hover:opacity-80 transition-opacity" href="#home" data-i18n="nav.home">Bosh sahifa</a>
+        <a class="nav-link text-[#4a6700] hover:opacity-80 transition-opacity" href="#menu" data-i18n="nav.menu">Menyu</a>
+        <a class="nav-link text-[#4a6700] hover:opacity-80 transition-opacity" href="#meal" data-i18n="nav.meal">Taom</a>
         <a class="nav-link text-[#4a6700] hover:opacity-80 transition-opacity" href="#cart">
-          Savat
+          <span data-i18n="nav.cart">Savat</span>
           <span
             id="cart-badge-desktop"
             class="ml-2 hidden inline-flex items-center justify-center text-[11px] font-black bg-secondary-container text-primary w-6 h-6 rounded-full align-middle"
@@ -140,11 +167,11 @@
       </nav>
 
       <div class="flex items-center gap-2 bg-surface-container-low rounded-full px-3 py-1" aria-label="Til">
-        <span class="text-xs font-bold text-[#03271a]">UZ</span>
+        <button class="tap-press text-xs font-bold text-[#03271a]" type="button" data-action="set-lang" data-lang="uz" aria-label="Til: O‘zbekcha">UZ</button>
         <span class="text-xs text-outline opacity-40">|</span>
-        <span class="text-xs font-medium text-outline">RU</span>
+        <button class="tap-press text-xs font-medium text-outline" type="button" data-action="set-lang" data-lang="ru" aria-label="Til: Русский">RU</button>
         <span class="text-xs text-outline opacity-40">|</span>
-        <span class="text-xs font-medium text-outline">EN</span>
+        <button class="tap-press text-xs font-medium text-outline" type="button" data-action="set-lang" data-lang="en" aria-label="Til: English">EN</button>
       </div>
     </header>
 
@@ -167,6 +194,7 @@
                 <a
                   class="inline-flex items-center justify-center bg-primary text-on-primary px-10 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-primary/20 transition-all active:scale-95"
                   href="#menu"
+                  data-i18n="cta.menu"
                 >
                   Menyuni ko‘rish
                 </a>
@@ -192,11 +220,11 @@
           <div class="max-w-7xl mx-auto">
             <div class="flex justify-between items-end mb-12">
               <div>
-                <h2 class="text-3xl font-bold text-primary">Komponentlar</h2>
-                <p class="text-on-surface-variant">Mahsulotlar alohida sotiladi — mijoz o‘zi yig‘adi</p>
+                <h2 class="text-3xl font-bold text-primary" data-i18n="home.componentsTitle">Komponentlar</h2>
+                <p class="text-on-surface-variant" data-i18n="home.componentsSubtitle">Mahsulotlar alohida sotiladi — mijoz o‘zi yig‘adi</p>
               </div>
               <a class="text-secondary font-bold flex items-center gap-1 group" href="#menu">
-                Hammasi
+                <span data-i18n="cta.viewAll">Hammasi</span>
                 <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
               </a>
             </div>
@@ -291,7 +319,10 @@
                 </p>
               </div>
               <div class="relative z-10 md:ml-auto">
-                <a class="bg-secondary-container text-primary font-bold px-6 py-3 rounded-full whitespace-nowrap hover:scale-105 transition-transform" href="#meal"
+                <a
+                  class="bg-secondary-container text-primary font-bold px-6 py-3 rounded-full whitespace-nowrap hover:scale-105 transition-transform"
+                  href="#meal"
+                  data-i18n="cta.learnMore"
                   >Batafsil</a
                 >
               </div>
@@ -310,15 +341,47 @@
 
           <section class="mb-10 overflow-x-auto hide-scrollbar -mx-6 px-6">
             <div class="flex gap-3 min-w-max">
-              <button class="bg-primary text-on-primary px-8 py-3 rounded-full font-headline font-semibold text-sm shadow-lg shadow-primary/10">Hammasi</button>
-              <button class="bg-surface-container-low text-primary px-8 py-3 rounded-full font-headline font-semibold text-sm hover:bg-surface-container-high transition-colors">Ko‘p protein</button>
-              <button class="bg-surface-container-low text-primary px-8 py-3 rounded-full font-headline font-semibold text-sm hover:bg-surface-container-high transition-colors">Kam uglevod</button>
-              <button class="bg-surface-container-low text-primary px-8 py-3 rounded-full font-headline font-semibold text-sm hover:bg-surface-container-high transition-colors">Vegan</button>
+              <button
+                class="bg-primary text-on-primary px-8 py-3 rounded-full font-headline font-semibold text-sm shadow-lg shadow-primary/10"
+                type="button"
+                data-action="filter"
+                data-filter="all"
+                aria-pressed="true"
+              >
+                Hammasi
+              </button>
+              <button
+                class="bg-surface-container-low text-primary px-8 py-3 rounded-full font-headline font-semibold text-sm hover:bg-surface-container-high transition-colors"
+                type="button"
+                data-action="filter"
+                data-filter="high-protein"
+                aria-pressed="false"
+              >
+                Ko‘p protein
+              </button>
+              <button
+                class="bg-surface-container-low text-primary px-8 py-3 rounded-full font-headline font-semibold text-sm hover:bg-surface-container-high transition-colors"
+                type="button"
+                data-action="filter"
+                data-filter="low-carb"
+                aria-pressed="false"
+              >
+                Kam uglevod
+              </button>
+              <button
+                class="bg-surface-container-low text-primary px-8 py-3 rounded-full font-headline font-semibold text-sm hover:bg-surface-container-high transition-colors"
+                type="button"
+                data-action="filter"
+                data-filter="vegan"
+                aria-pressed="false"
+              >
+                Vegan
+              </button>
             </div>
           </section>
 
-          <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <article class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col group shadow-[0_10px_40px_-15px_rgba(25,28,28,0.06)] hover:translate-y-[-4px] transition-transform duration-300">
+          <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="menu-grid">
+            <article class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col group shadow-[0_10px_40px_-15px_rgba(25,28,28,0.06)] hover:translate-y-[-4px] transition-transform duration-300" data-product-id="salmon">
               <div class="relative h-64 overflow-hidden">
                 <img alt="Losos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./assets/dishes/salmon.png" />
                 <div class="absolute top-4 left-4 bg-secondary-container/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-bold text-xs">KO‘P PROTEIN</div>
@@ -338,6 +401,16 @@
                     <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Protein</span>
                     <span class="text-sm font-bold text-primary">42g</span>
                   </div>
+                  <div class="h-8 w-[1px] bg-outline-variant/15"></div>
+                  <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Yog‘</span>
+                    <span class="text-sm font-bold text-primary">12g</span>
+                  </div>
+                  <div class="h-8 w-[1px] bg-outline-variant/15"></div>
+                  <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Uglevod</span>
+                    <span class="text-sm font-bold text-primary">15g</span>
+                  </div>
                 </div>
                 <button
                   class="mt-auto w-full bg-primary text-on-primary rounded-full py-4 font-headline font-bold text-sm tracking-wide active:scale-95 transition-all flex items-center justify-center gap-2"
@@ -351,7 +424,7 @@
               </div>
             </article>
 
-            <article class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col group shadow-[0_10px_40px_-15px_rgba(25,28,28,0.06)] hover:translate-y-[-4px] transition-transform duration-300">
+            <article class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col group shadow-[0_10px_40px_-15px_rgba(25,28,28,0.06)] hover:translate-y-[-4px] transition-transform duration-300" data-product-id="chicken">
               <div class="relative h-64 overflow-hidden">
                 <img alt="Tovuq" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./assets/dishes/chicken.png" />
                 <div class="absolute top-4 left-4 bg-secondary-container/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-bold text-xs">TOZA PROTEIN</div>
@@ -371,6 +444,16 @@
                     <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Protein</span>
                     <span class="text-sm font-bold text-primary">38g</span>
                   </div>
+                  <div class="h-8 w-[1px] bg-outline-variant/15"></div>
+                  <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Yog‘</span>
+                    <span class="text-sm font-bold text-primary">6g</span>
+                  </div>
+                  <div class="h-8 w-[1px] bg-outline-variant/15"></div>
+                  <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Uglevod</span>
+                    <span class="text-sm font-bold text-primary">8g</span>
+                  </div>
                 </div>
                 <button
                   class="mt-auto w-full bg-primary text-on-primary rounded-full py-4 font-headline font-bold text-sm tracking-wide active:scale-95 transition-all flex items-center justify-center gap-2"
@@ -384,7 +467,7 @@
               </div>
             </article>
 
-            <article class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col group shadow-[0_10px_40px_-15px_rgba(25,28,28,0.06)] hover:translate-y-[-4px] transition-transform duration-300">
+            <article class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col group shadow-[0_10px_40px_-15px_rgba(25,28,28,0.06)] hover:translate-y-[-4px] transition-transform duration-300" data-product-id="beef_steak">
               <div class="relative h-64 overflow-hidden">
                 <img alt="Mol go‘sht" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./assets/dishes/beef_steak.png" />
                 <div class="absolute top-4 left-4 bg-surface-container-lowest/80 backdrop-blur-md px-3 py-1 rounded-full text-primary font-bold text-xs">PREMIUM</div>
@@ -404,6 +487,16 @@
                     <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Protein</span>
                     <span class="text-sm font-bold text-primary">55g</span>
                   </div>
+                  <div class="h-8 w-[1px] bg-outline-variant/15"></div>
+                  <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Yog‘</span>
+                    <span class="text-sm font-bold text-primary">28g</span>
+                  </div>
+                  <div class="h-8 w-[1px] bg-outline-variant/15"></div>
+                  <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Uglevod</span>
+                    <span class="text-sm font-bold text-primary">2g</span>
+                  </div>
                 </div>
                 <button
                   class="mt-auto w-full bg-primary text-on-primary rounded-full py-4 font-headline font-bold text-sm tracking-wide active:scale-95 transition-all flex items-center justify-center gap-2"
@@ -417,7 +510,7 @@
               </div>
             </article>
 
-            <article class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col group shadow-[0_10px_40px_-15px_rgba(25,28,28,0.06)] hover:translate-y-[-4px] transition-transform duration-300">
+            <article class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col group shadow-[0_10px_40px_-15px_rgba(25,28,28,0.06)] hover:translate-y-[-4px] transition-transform duration-300" data-product-id="rice">
               <div class="relative h-64 overflow-hidden">
                 <img alt="Guruch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./assets/dishes/rice.png" />
                 <div class="absolute top-4 left-4 bg-tertiary-fixed text-on-tertiary-fixed-variant px-3 py-1 rounded-full font-bold text-xs">UGLEVOD</div>
@@ -427,7 +520,27 @@
                   <h3 class="font-headline font-bold text-xl text-primary leading-tight">Guruch</h3>
                   <span class="font-headline font-extrabold text-primary text-lg">15,000 UZS</span>
                 </div>
-                <p class="text-on-surface-variant text-sm font-medium mt-2 mb-6">Garnir uchun mos.</p>
+                <div class="flex flex-wrap gap-4 mt-4 mb-6">
+                  <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Kkal</span>
+                    <span class="text-sm font-bold text-primary">200</span>
+                  </div>
+                  <div class="h-8 w-[1px] bg-outline-variant/15"></div>
+                  <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Protein</span>
+                    <span class="text-sm font-bold text-primary">4g</span>
+                  </div>
+                  <div class="h-8 w-[1px] bg-outline-variant/15"></div>
+                  <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Yog‘</span>
+                    <span class="text-sm font-bold text-primary">1g</span>
+                  </div>
+                  <div class="h-8 w-[1px] bg-outline-variant/15"></div>
+                  <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Uglevod</span>
+                    <span class="text-sm font-bold text-primary">44g</span>
+                  </div>
+                </div>
                 <button
                   class="mt-auto w-full bg-primary text-on-primary rounded-full py-4 font-headline font-bold text-sm tracking-wide active:scale-95 transition-all flex items-center justify-center gap-2"
                   type="button"
@@ -440,7 +553,7 @@
               </div>
             </article>
 
-            <article class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col group shadow-[0_10px_40px_-15px_rgba(25,28,28,0.06)] hover:translate-y-[-4px] transition-transform duration-300">
+            <article class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col group shadow-[0_10px_40px_-15px_rgba(25,28,28,0.06)] hover:translate-y-[-4px] transition-transform duration-300" data-product-id="potato">
               <div class="relative h-64 overflow-hidden">
                 <img alt="Kartoshka" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./assets/dishes/potato.png" />
                 <div class="absolute top-4 left-4 bg-tertiary-fixed text-on-tertiary-fixed-variant px-3 py-1 rounded-full font-bold text-xs">GARNIR</div>
@@ -450,7 +563,27 @@
                   <h3 class="font-headline font-bold text-xl text-primary leading-tight">Kartoshka</h3>
                   <span class="font-headline font-extrabold text-primary text-lg">17,000 UZS</span>
                 </div>
-                <p class="text-on-surface-variant text-sm font-medium mt-2 mb-6">Yengil garnir.</p>
+                <div class="flex flex-wrap gap-4 mt-4 mb-6">
+                  <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Kkal</span>
+                    <span class="text-sm font-bold text-primary">180</span>
+                  </div>
+                  <div class="h-8 w-[1px] bg-outline-variant/15"></div>
+                  <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Protein</span>
+                    <span class="text-sm font-bold text-primary">4g</span>
+                  </div>
+                  <div class="h-8 w-[1px] bg-outline-variant/15"></div>
+                  <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Yog‘</span>
+                    <span class="text-sm font-bold text-primary">0g</span>
+                  </div>
+                  <div class="h-8 w-[1px] bg-outline-variant/15"></div>
+                  <div class="flex flex-col">
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Uglevod</span>
+                    <span class="text-sm font-bold text-primary">37g</span>
+                  </div>
+                </div>
                 <button
                   class="mt-auto w-full bg-primary text-on-primary rounded-full py-4 font-headline font-bold text-sm tracking-wide active:scale-95 transition-all flex items-center justify-center gap-2"
                   type="button"
@@ -625,8 +758,8 @@
           <section class="mb-10">
             <div class="flex items-end justify-between mb-6">
               <div>
-                <h2 class="font-headline font-bold text-3xl tracking-tight text-primary">Aqlli savat</h2>
-                <p class="text-on-surface-variant font-medium">Kunlik reja — real vaqt nazorati</p>
+                <h2 class="font-headline font-bold text-3xl tracking-tight text-primary" data-i18n="cart.title">Aqlli savat</h2>
+                <p class="text-on-surface-variant font-medium" data-i18n="cart.subtitle">Kunlik reja — real vaqt nazorati</p>
               </div>
               <div class="hidden md:block">
                 <span class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full font-bold text-sm">
@@ -740,7 +873,11 @@
                     <span class="font-headline font-extrabold text-2xl" id="summary-total">0 UZS</span>
                   </div>
                 </div>
-                <button class="w-full bg-secondary-container text-primary font-headline font-bold py-4 rounded-full text-lg hover:scale-[1.02] transition-transform active:scale-95 shadow-xl" type="button">
+                <button
+                  class="w-full bg-secondary-container text-primary font-headline font-bold py-4 rounded-full text-lg hover:scale-[1.02] transition-transform active:scale-95 shadow-xl"
+                  type="button"
+                  data-i18n="cart.checkout"
+                >
                   Buyurtma berish
                 </button>
                 <div class="mt-8 p-4 bg-white/5 rounded-lg border border-white/10">
@@ -766,19 +903,19 @@
     >
       <a class="bottom-link flex flex-col items-center justify-center text-[#444844] px-6 py-2 hover:bg-[#f3f4f3] rounded-full transition-all duration-300" href="#home" data-target="home">
         <span class="material-symbols-outlined">home</span>
-        <span class="font-['Manrope'] font-medium text-[11px]">Bosh</span>
+        <span class="font-['Manrope'] font-medium text-[11px]" data-i18n="nav.home">Bosh</span>
       </a>
       <a class="bottom-link flex flex-col items-center justify-center text-[#444844] px-6 py-2 hover:bg-[#f3f4f3] rounded-full transition-all duration-300" href="#menu" data-target="menu">
         <span class="material-symbols-outlined">restaurant_menu</span>
-        <span class="font-['Manrope'] font-medium text-[11px]">Menyu</span>
+        <span class="font-['Manrope'] font-medium text-[11px]" data-i18n="nav.menu">Menyu</span>
       </a>
       <a class="bottom-link flex flex-col items-center justify-center text-[#444844] px-6 py-2 hover:bg-[#f3f4f3] rounded-full transition-all duration-300" href="#meal" data-target="meal">
         <span class="material-symbols-outlined">nutrition</span>
-        <span class="font-['Manrope'] font-medium text-[11px]">Taom</span>
+        <span class="font-['Manrope'] font-medium text-[11px]" data-i18n="nav.meal">Taom</span>
       </a>
       <a class="bottom-link flex flex-col items-center justify-center text-[#444844] px-6 py-2 hover:bg-[#f3f4f3] rounded-full transition-all duration-300" href="#cart" data-target="cart">
         <span class="material-symbols-outlined">shopping_bag</span>
-        <span class="font-['Manrope'] font-medium text-[11px]">Savat</span>
+        <span class="font-['Manrope'] font-medium text-[11px]" data-i18n="nav.cart">Savat</span>
       </a>
     </nav>
 
@@ -788,51 +925,65 @@
         salmon: {
           id: "salmon",
           title: "Losos (file)",
-          subtitle: "450 kcal • 42g protein",
+          subtitle: "450 kcal • P42 • F12 • C15 / 100g",
           price: 75000,
           image: "./assets/dishes/salmon.png",
+          tags: ["high-protein", "low-carb"],
+          macrosPer100g: { kcal: 450, protein: 42, fat: 12, carbs: 15 },
         },
         chicken: {
           id: "chicken",
           title: "Tovuq (file)",
-          subtitle: "310 kcal • 38g protein",
+          subtitle: "310 kcal • P38 • F6 • C8 / 100g",
           price: 58000,
           image: "./assets/dishes/chicken.png",
+          tags: ["high-protein", "low-carb"],
+          macrosPer100g: { kcal: 310, protein: 38, fat: 6, carbs: 8 },
         },
         beef_steak: {
           id: "beef_steak",
           title: "Mol go‘sht (steak)",
-          subtitle: "520 kcal • 55g protein",
+          subtitle: "520 kcal • P55 • F28 • C2 / 100g",
           price: 115000,
           image: "./assets/dishes/beef_steak.png",
+          tags: ["high-protein", "low-carb"],
+          macrosPer100g: { kcal: 520, protein: 55, fat: 28, carbs: 2 },
         },
         beef_sliced: {
           id: "beef_sliced",
           title: "Mol go‘sht (tilim)",
-          subtitle: "290 kcal • 32g protein",
+          subtitle: "290 kcal • P32 • F12 • C2 / 100g",
           price: 69000,
           image: "./assets/dishes/beef_sliced.png",
+          tags: ["high-protein", "low-carb"],
+          macrosPer100g: { kcal: 290, protein: 32, fat: 12, carbs: 2 },
         },
         rice: {
           id: "rice",
           title: "Guruch",
-          subtitle: "200 kcal • 4g protein",
+          subtitle: "200 kcal • P4 • F1 • C44 / 100g",
           price: 15000,
           image: "./assets/dishes/rice.png",
+          tags: ["vegan"],
+          macrosPer100g: { kcal: 200, protein: 4, fat: 1, carbs: 44 },
         },
         potato: {
           id: "potato",
           title: "Kartoshka",
-          subtitle: "180 kcal • 4g protein",
+          subtitle: "180 kcal • P4 • F0 • C37 / 100g",
           price: 17000,
           image: "./assets/dishes/potato.png",
+          tags: ["vegan"],
+          macrosPer100g: { kcal: 180, protein: 4, fat: 0, carbs: 37 },
         },
         dessert: {
           id: "dessert",
           title: "Shirinlik (desert)",
-          subtitle: "360 kcal",
+          subtitle: "360 kcal • P6 • F10 • C52 / 100g",
           price: 32000,
           image: "./assets/dishes/dessert.png",
+          tags: ["vegan"],
+          macrosPer100g: { kcal: 360, protein: 6, fat: 10, carbs: 52 },
         },
       };
       const STORAGE_KEY = "azgu.cart.v1";
@@ -990,7 +1141,9 @@
           if (!el) continue;
           const active = id === viewId;
           el.classList.toggle("hidden", !active);
-          el.toggleAttribute("inert", !active);
+          // `toggleAttribute` / `inert` support varies across mobile browsers; keep it safe.
+          if (!active) el.setAttribute("inert", "");
+          else el.removeAttribute("inert");
           el.setAttribute("aria-hidden", String(!active));
         }
         setActiveLinks(viewId);
@@ -1003,6 +1156,18 @@
         if (!btn) return;
         const action = btn.getAttribute("data-action");
         const productId = btn.getAttribute("data-product-id");
+        const lang = btn.getAttribute("data-lang");
+        const filter = btn.getAttribute("data-filter");
+
+        if (action === "set-lang" && lang) {
+          setLang(lang);
+          return;
+        }
+
+        if (action === "filter" && filter) {
+          setMenuFilter(filter);
+          return;
+        }
 
         if (action === "add-to-cart" && productId) {
           addToCart(productId, 1);
@@ -1021,6 +1186,148 @@
         if (action === "remove-item") setQty(itemProductId, 0);
       });
 
+      let activeMenuFilter = "all";
+
+      function setMenuFilter(filter) {
+        activeMenuFilter = String(filter || "all");
+        for (const chip of document.querySelectorAll('[data-action="filter"][data-filter]')) {
+          const isActive = chip.getAttribute("data-filter") === activeMenuFilter;
+          chip.setAttribute("aria-pressed", String(isActive));
+          chip.classList.toggle("bg-primary", isActive);
+          chip.classList.toggle("text-on-primary", isActive);
+          chip.classList.toggle("shadow-lg", isActive);
+          chip.classList.toggle("shadow-primary/10", isActive);
+
+          chip.classList.toggle("bg-surface-container-low", !isActive);
+          chip.classList.toggle("text-primary", !isActive);
+        }
+        applyMenuFilter();
+      }
+
+      function applyMenuFilter() {
+        const grid = document.getElementById("menu-grid");
+        if (!grid) return;
+        for (const card of grid.querySelectorAll("article[data-product-id]")) {
+          const pid = card.getAttribute("data-product-id");
+          const product = pid ? PRODUCTS[pid] : null;
+          const tags = product?.tags || [];
+          const show = activeMenuFilter === "all" ? true : tags.includes(activeMenuFilter);
+          card.classList.toggle("hidden", !show);
+        }
+      }
+
+      const LANG_STORAGE_KEY = "azgu.lang.v1";
+      const I18N = {
+        uz: {
+          "nav.home": "Bosh sahifa",
+          "nav.menu": "Menyu",
+          "nav.meal": "Taom",
+          "nav.cart": "Savat",
+          "cta.menu": "Menyuni ko‘rish",
+          "cta.learnMore": "Batafsil",
+          "cta.viewAll": "Hammasi",
+          "home.componentsTitle": "Komponentlar",
+          "home.componentsSubtitle": "Mahsulotlar alohida sotiladi — mijoz o‘zi yig‘adi",
+          "cart.title": "Aqlli savat",
+          "cart.subtitle": "Kunlik reja — real vaqt nazorati",
+          "cart.checkout": "Buyurtma berish",
+        },
+        ru: {
+          "nav.home": "Главная",
+          "nav.menu": "Меню",
+          "nav.meal": "Блюдо",
+          "nav.cart": "Корзина",
+          "cta.menu": "Смотреть меню",
+          "cta.learnMore": "Подробнее",
+          "cta.viewAll": "Все",
+          "home.componentsTitle": "Компоненты",
+          "home.componentsSubtitle": "Ингредиенты продаются отдельно — клиент собирает сам",
+          "cart.title": "Умная корзина",
+          "cart.subtitle": "Дневной план — контроль в реальном времени",
+          "cart.checkout": "Оформить заказ",
+        },
+        en: {
+          "nav.home": "Home",
+          "nav.menu": "Menu",
+          "nav.meal": "Meal",
+          "nav.cart": "Cart",
+          "cta.menu": "Explore the menu",
+          "cta.learnMore": "Learn more",
+          "cta.viewAll": "View all",
+          "home.componentsTitle": "Components",
+          "home.componentsSubtitle": "Items are sold separately — build your own",
+          "cart.title": "Smart cart",
+          "cart.subtitle": "Daily plan — real-time tracking",
+          "cart.checkout": "Checkout",
+        },
+      };
+
+      function safeLang(lang) {
+        return lang === "uz" || lang === "ru" || lang === "en" ? lang : "uz";
+      }
+
+      function getLang() {
+        try {
+          return safeLang(localStorage.getItem(LANG_STORAGE_KEY) || document.documentElement.lang || "uz");
+        } catch {
+          return safeLang(document.documentElement.lang || "uz");
+        }
+      }
+
+      function setActiveLangButtons(lang) {
+        for (const el of document.querySelectorAll('[data-action="set-lang"][data-lang]')) {
+          const isActive = el.getAttribute("data-lang") === lang;
+          el.classList.toggle("font-bold", isActive);
+          el.classList.toggle("text-[#03271a]", isActive);
+          el.classList.toggle("font-medium", !isActive);
+          el.classList.toggle("text-outline", !isActive);
+          el.setAttribute("aria-pressed", String(isActive));
+        }
+      }
+
+      function applyI18n(lang) {
+        const dict = I18N[lang] || I18N.uz;
+
+        for (const el of document.querySelectorAll("[data-i18n]")) {
+          const key = el.getAttribute("data-i18n");
+          if (!key) continue;
+          const value = dict[key];
+          if (typeof value !== "string") continue;
+          el.textContent = value;
+        }
+      }
+
+      function setLang(lang) {
+        const next = safeLang(lang);
+        try {
+          localStorage.setItem(LANG_STORAGE_KEY, next);
+        } catch {}
+        document.documentElement.lang = next;
+        setActiveLangButtons(next);
+        applyI18n(next);
+      }
+
+      function enhanceTapPress() {
+        const pressables = new Set();
+        document.querySelectorAll("button, a, [role='button'], [data-action]").forEach((el) => pressables.add(el));
+        for (const el of pressables) el.classList.add("tap-press");
+        document.addEventListener(
+          "pointerdown",
+          (e) => {
+            const el = e.target.closest(".tap-press");
+            if (!el) return;
+            el.classList.remove("tap-press--pulse");
+            // Force reflow to restart animation reliably
+            void el.offsetWidth;
+            el.classList.add("tap-press--pulse");
+          },
+          { capture: true }
+        );
+      }
+
+      enhanceTapPress();
+      setLang(getLang());
+      setMenuFilter("all");
       renderCartUI();
       showView(getHashView());
     </script>
