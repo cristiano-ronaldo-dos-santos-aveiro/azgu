@@ -347,6 +347,7 @@
                 data-action="filter"
                 data-filter="all"
                 aria-pressed="true"
+                data-i18n="menu.filter.all"
               >
                 Hammasi
               </button>
@@ -354,28 +355,41 @@
                 class="bg-surface-container-low text-primary px-8 py-3 rounded-full font-headline font-semibold text-sm hover:bg-surface-container-high transition-colors"
                 type="button"
                 data-action="filter"
-                data-filter="high-protein"
+                data-filter="meat"
                 aria-pressed="false"
+                data-i18n="menu.filter.meat"
               >
-                Ko‘p protein
+                Go‘sht
               </button>
               <button
                 class="bg-surface-container-low text-primary px-8 py-3 rounded-full font-headline font-semibold text-sm hover:bg-surface-container-high transition-colors"
                 type="button"
                 data-action="filter"
-                data-filter="low-carb"
+                data-filter="garnish"
                 aria-pressed="false"
+                data-i18n="menu.filter.garnish"
               >
-                Kam uglevod
+                Garnirlar
               </button>
               <button
                 class="bg-surface-container-low text-primary px-8 py-3 rounded-full font-headline font-semibold text-sm hover:bg-surface-container-high transition-colors"
                 type="button"
                 data-action="filter"
-                data-filter="vegan"
+                data-filter="veggies"
                 aria-pressed="false"
+                data-i18n="menu.filter.veggies"
               >
-                Vegan
+                Sabzavotlar
+              </button>
+              <button
+                class="bg-surface-container-low text-primary px-8 py-3 rounded-full font-headline font-semibold text-sm hover:bg-surface-container-high transition-colors"
+                type="button"
+                data-action="filter"
+                data-filter="desserts"
+                aria-pressed="false"
+                data-i18n="menu.filter.desserts"
+              >
+                Desertlar
               </button>
             </div>
           </section>
@@ -384,7 +398,7 @@
             <article class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col group shadow-[0_10px_40px_-15px_rgba(25,28,28,0.06)] hover:translate-y-[-4px] transition-transform duration-300" data-product-id="salmon">
               <div class="relative h-64 overflow-hidden">
                 <img alt="Losos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./assets/dishes/salmon.png" />
-                <div class="absolute top-4 left-4 bg-secondary-container/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-bold text-xs">KO‘P PROTEIN</div>
+                <div class="absolute top-4 left-4 bg-secondary-container/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-bold text-xs">GO‘SHT</div>
               </div>
               <div class="p-6 flex flex-col flex-grow">
                 <div class="flex justify-between items-start mb-2">
@@ -427,7 +441,7 @@
             <article class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col group shadow-[0_10px_40px_-15px_rgba(25,28,28,0.06)] hover:translate-y-[-4px] transition-transform duration-300" data-product-id="chicken">
               <div class="relative h-64 overflow-hidden">
                 <img alt="Tovuq" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./assets/dishes/chicken.png" />
-                <div class="absolute top-4 left-4 bg-secondary-container/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-bold text-xs">TOZA PROTEIN</div>
+                <div class="absolute top-4 left-4 bg-secondary-container/90 backdrop-blur-md px-3 py-1 rounded-full text-primary font-bold text-xs">GO‘SHT</div>
               </div>
               <div class="p-6 flex flex-col flex-grow">
                 <div class="flex justify-between items-start mb-2">
@@ -470,7 +484,7 @@
             <article class="bg-surface-container-lowest rounded-lg overflow-hidden flex flex-col group shadow-[0_10px_40px_-15px_rgba(25,28,28,0.06)] hover:translate-y-[-4px] transition-transform duration-300" data-product-id="beef_steak">
               <div class="relative h-64 overflow-hidden">
                 <img alt="Mol go‘sht" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./assets/dishes/beef_steak.png" />
-                <div class="absolute top-4 left-4 bg-surface-container-lowest/80 backdrop-blur-md px-3 py-1 rounded-full text-primary font-bold text-xs">PREMIUM</div>
+                <div class="absolute top-4 left-4 bg-surface-container-lowest/80 backdrop-blur-md px-3 py-1 rounded-full text-primary font-bold text-xs">GO‘SHT</div>
               </div>
               <div class="p-6 flex flex-col flex-grow">
                 <div class="flex justify-between items-start mb-2">
@@ -773,41 +787,41 @@
               <div class="bg-surface-container-lowest p-6 rounded-lg shadow-[0_10px_40px_rgba(25,28,28,0.03)] border-b-4 border-primary">
                 <p class="font-label text-xs font-bold uppercase tracking-widest text-outline mb-1">Calories</p>
                 <div class="flex items-baseline gap-1">
-                  <span class="font-headline text-3xl font-extrabold text-primary">1,840</span>
+                  <span class="font-headline text-3xl font-extrabold text-primary" id="macro-kcal">0</span>
                   <span class="text-outline text-sm font-medium">kcal</span>
                 </div>
                 <div class="mt-4 h-1.5 w-full bg-surface-variant rounded-full overflow-hidden">
-                  <div class="h-full bg-primary rounded-full w-[72%]"></div>
+                  <div class="h-full bg-primary rounded-full w-[0%]" id="macro-kcal-bar"></div>
                 </div>
               </div>
               <div class="bg-surface-container-lowest p-6 rounded-lg shadow-[0_10px_40px_rgba(25,28,28,0.03)] border-b-4 border-secondary">
                 <p class="font-label text-xs font-bold uppercase tracking-widest text-outline mb-1">Protein</p>
                 <div class="flex items-baseline gap-1">
-                  <span class="font-headline text-3xl font-extrabold text-primary">142</span>
+                  <span class="font-headline text-3xl font-extrabold text-primary" id="macro-protein">0</span>
                   <span class="text-outline text-sm font-medium">g</span>
                 </div>
                 <div class="mt-4 h-1.5 w-full bg-surface-variant rounded-full overflow-hidden">
-                  <div class="h-full bg-secondary rounded-full w-[65%]"></div>
+                  <div class="h-full bg-secondary rounded-full w-[0%]" id="macro-protein-bar"></div>
                 </div>
               </div>
               <div class="bg-surface-container-lowest p-6 rounded-lg shadow-[0_10px_40px_rgba(25,28,28,0.03)] border-b-4 border-primary-fixed-dim">
                 <p class="font-label text-xs font-bold uppercase tracking-widest text-outline mb-1">Fat</p>
                 <div class="flex items-baseline gap-1">
-                  <span class="font-headline text-3xl font-extrabold text-primary">56</span>
+                  <span class="font-headline text-3xl font-extrabold text-primary" id="macro-fat">0</span>
                   <span class="text-outline text-sm font-medium">g</span>
                 </div>
                 <div class="mt-4 h-1.5 w-full bg-surface-variant rounded-full overflow-hidden">
-                  <div class="h-full bg-primary-fixed-dim rounded-full w-[45%]"></div>
+                  <div class="h-full bg-primary-fixed-dim rounded-full w-[0%]" id="macro-fat-bar"></div>
                 </div>
               </div>
               <div class="bg-surface-container-lowest p-6 rounded-lg shadow-[0_10px_40px_rgba(25,28,28,0.03)] border-b-4 border-tertiary-fixed-dim">
                 <p class="font-label text-xs font-bold uppercase tracking-widest text-outline mb-1">Carbs</p>
                 <div class="flex items-baseline gap-1">
-                  <span class="font-headline text-3xl font-extrabold text-primary">192</span>
+                  <span class="font-headline text-3xl font-extrabold text-primary" id="macro-carbs">0</span>
                   <span class="text-outline text-sm font-medium">g</span>
                 </div>
                 <div class="mt-4 h-1.5 w-full bg-surface-variant rounded-full overflow-hidden">
-                  <div class="h-full bg-tertiary-fixed-dim rounded-full w-[88%]"></div>
+                  <div class="h-full bg-tertiary-fixed-dim rounded-full w-[0%]" id="macro-carbs-bar"></div>
                 </div>
               </div>
             </div>
@@ -928,7 +942,7 @@
           subtitle: "450 kcal • P42 • F12 • C15 / 100g",
           price: 75000,
           image: "./assets/dishes/salmon.png",
-          tags: ["high-protein", "low-carb"],
+          tags: ["meat"],
           macrosPer100g: { kcal: 450, protein: 42, fat: 12, carbs: 15 },
         },
         chicken: {
@@ -937,7 +951,7 @@
           subtitle: "310 kcal • P38 • F6 • C8 / 100g",
           price: 58000,
           image: "./assets/dishes/chicken.png",
-          tags: ["high-protein", "low-carb"],
+          tags: ["meat"],
           macrosPer100g: { kcal: 310, protein: 38, fat: 6, carbs: 8 },
         },
         beef_steak: {
@@ -946,7 +960,7 @@
           subtitle: "520 kcal • P55 • F28 • C2 / 100g",
           price: 115000,
           image: "./assets/dishes/beef_steak.png",
-          tags: ["high-protein", "low-carb"],
+          tags: ["meat"],
           macrosPer100g: { kcal: 520, protein: 55, fat: 28, carbs: 2 },
         },
         beef_sliced: {
@@ -955,7 +969,7 @@
           subtitle: "290 kcal • P32 • F12 • C2 / 100g",
           price: 69000,
           image: "./assets/dishes/beef_sliced.png",
-          tags: ["high-protein", "low-carb"],
+          tags: ["meat"],
           macrosPer100g: { kcal: 290, protein: 32, fat: 12, carbs: 2 },
         },
         rice: {
@@ -964,7 +978,7 @@
           subtitle: "200 kcal • P4 • F1 • C44 / 100g",
           price: 15000,
           image: "./assets/dishes/rice.png",
-          tags: ["vegan"],
+          tags: ["garnish"],
           macrosPer100g: { kcal: 200, protein: 4, fat: 1, carbs: 44 },
         },
         potato: {
@@ -973,7 +987,7 @@
           subtitle: "180 kcal • P4 • F0 • C37 / 100g",
           price: 17000,
           image: "./assets/dishes/potato.png",
-          tags: ["vegan"],
+          tags: ["garnish"],
           macrosPer100g: { kcal: 180, protein: 4, fat: 0, carbs: 37 },
         },
         dessert: {
@@ -982,7 +996,7 @@
           subtitle: "360 kcal • P6 • F10 • C52 / 100g",
           price: 32000,
           image: "./assets/dishes/dessert.png",
-          tags: ["vegan"],
+          tags: ["desserts"],
           macrosPer100g: { kcal: 360, protein: 6, fat: 10, carbs: 52 },
         },
       };
@@ -1107,10 +1121,65 @@
         if (totalEl) totalEl.textContent = formatUzs(total);
       }
 
+      function calcCartMacros(cart) {
+        const total = { kcal: 0, protein: 0, fat: 0, carbs: 0 };
+        for (const [productId, qtyRaw] of Object.entries(cart || {})) {
+          const qty = Number(qtyRaw) || 0;
+          if (qty <= 0) continue;
+          const product = PRODUCTS[productId];
+          const m = product?.macrosPer100g;
+          if (!product || !m) continue;
+          total.kcal += (Number(m.kcal) || 0) * qty;
+          total.protein += (Number(m.protein) || 0) * qty;
+          total.fat += (Number(m.fat) || 0) * qty;
+          total.carbs += (Number(m.carbs) || 0) * qty;
+        }
+        return total;
+      }
+
+      function clampPct(value) {
+        if (!Number.isFinite(value)) return 0;
+        return Math.max(0, Math.min(100, value));
+      }
+
+      function renderMacroSummary() {
+        const view = getHashView();
+        // Don't do DOM work unless cart view is visible
+        if (view !== "cart") return;
+
+        const cart = loadCart();
+        const m = calcCartMacros(cart);
+
+        const kcalEl = document.getElementById("macro-kcal");
+        const proteinEl = document.getElementById("macro-protein");
+        const fatEl = document.getElementById("macro-fat");
+        const carbsEl = document.getElementById("macro-carbs");
+        if (kcalEl) kcalEl.textContent = String(Math.round(m.kcal));
+        if (proteinEl) proteinEl.textContent = String(Math.round(m.protein));
+        if (fatEl) fatEl.textContent = String(Math.round(m.fat));
+        if (carbsEl) carbsEl.textContent = String(Math.round(m.carbs));
+
+        // If you later add real daily targets, adjust these denominators.
+        const kcalPct = clampPct((m.kcal / 2000) * 100);
+        const proteinPct = clampPct((m.protein / 150) * 100);
+        const fatPct = clampPct((m.fat / 70) * 100);
+        const carbsPct = clampPct((m.carbs / 250) * 100);
+
+        const kcalBar = document.getElementById("macro-kcal-bar");
+        const proteinBar = document.getElementById("macro-protein-bar");
+        const fatBar = document.getElementById("macro-fat-bar");
+        const carbsBar = document.getElementById("macro-carbs-bar");
+        if (kcalBar) kcalBar.style.width = `${kcalPct}%`;
+        if (proteinBar) proteinBar.style.width = `${proteinPct}%`;
+        if (fatBar) fatBar.style.width = `${fatPct}%`;
+        if (carbsBar) carbsBar.style.width = `${carbsPct}%`;
+      }
+
       function renderCartUI() {
         renderBadges();
         renderCartItems();
         renderSummary();
+        renderMacroSummary();
       }
 
       function setActiveLinks(viewId) {
@@ -1226,6 +1295,11 @@
           "cta.menu": "Menyuni ko‘rish",
           "cta.learnMore": "Batafsil",
           "cta.viewAll": "Hammasi",
+          "menu.filter.all": "Umumiy",
+          "menu.filter.meat": "Go‘sht",
+          "menu.filter.garnish": "Garnirlar",
+          "menu.filter.veggies": "Sabzavotlar",
+          "menu.filter.desserts": "Desertlar",
           "home.componentsTitle": "Komponentlar",
           "home.componentsSubtitle": "Mahsulotlar alohida sotiladi — mijoz o‘zi yig‘adi",
           "cart.title": "Aqlli savat",
@@ -1240,6 +1314,11 @@
           "cta.menu": "Смотреть меню",
           "cta.learnMore": "Подробнее",
           "cta.viewAll": "Все",
+          "menu.filter.all": "ОБЩИЙ",
+          "menu.filter.meat": "МЯСО",
+          "menu.filter.garnish": "ГАРНИРЫ",
+          "menu.filter.veggies": "ОВОЩИ",
+          "menu.filter.desserts": "ДЕСЕРТЫ",
           "home.componentsTitle": "Компоненты",
           "home.componentsSubtitle": "Ингредиенты продаются отдельно — клиент собирает сам",
           "cart.title": "Умная корзина",
@@ -1254,6 +1333,11 @@
           "cta.menu": "Explore the menu",
           "cta.learnMore": "Learn more",
           "cta.viewAll": "View all",
+          "menu.filter.all": "All",
+          "menu.filter.meat": "Meat",
+          "menu.filter.garnish": "Sides",
+          "menu.filter.veggies": "Vegetables",
+          "menu.filter.desserts": "Desserts",
           "home.componentsTitle": "Components",
           "home.componentsSubtitle": "Items are sold separately — build your own",
           "cart.title": "Smart cart",
