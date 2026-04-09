@@ -147,7 +147,7 @@
     >
       <div class="flex items-center gap-4">
         <span class="material-symbols-outlined text-[#03271a] cursor-pointer">menu</span>
-        <a class="flex items-center gap-3" href="#home" aria-label="AZGU bosh sahifa" data-i18n="aria.home">
+        <a class="flex items-center gap-3" href="#home" aria-label="AZGU bosh sahifa" data-i18n-aria-label="aria.home">
           <img src="./assets/logo.png" alt="AZGU logo" class="h-8 w-8 rounded-md object-cover shadow-sm" />
           <span class="text-xl font-black text-[#03271a] tracking-tighter">AZGU</span>
         </a>
@@ -756,7 +756,7 @@
               <div class="hidden md:block">
                 <span class="inline-flex items-center gap-2 bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full font-bold text-sm">
                   <span class="material-symbols-outlined text-sm">bolt</span>
-                  NATIJA UCHUN MOSLANGAN
+                  <span data-i18n="cart.optimized">NATIJA UCHUN MOSLANGAN</span>
                 </span>
               </div>
             </div>
@@ -766,7 +766,7 @@
                 <p class="font-label text-xs font-bold uppercase tracking-widest text-outline mb-1" data-i18n="macro.calories">Calories</p>
                 <div class="flex items-baseline gap-1">
                   <span class="font-headline text-3xl font-extrabold text-primary" id="macro-kcal">0</span>
-                  <span class="text-outline text-sm font-medium">kcal</span>
+                  <span class="text-outline text-sm font-medium" data-i18n="unit.kcal">kcal</span>
                 </div>
                 <div class="mt-4 h-1.5 w-full bg-surface-variant rounded-full overflow-hidden">
                   <div class="h-full bg-primary rounded-full w-[0%]" id="macro-kcal-bar"></div>
@@ -807,7 +807,7 @@
 
           <div class="flex flex-col lg:flex-row gap-10">
             <div class="flex-grow space-y-6">
-              <h3 class="font-headline text-xl font-bold text-primary">Tanlanganlar</h3>
+              <h3 class="font-headline text-xl font-bold text-primary" data-i18n="cart.selection">Tanlanganlar</h3>
               <div id="cart-items" class="space-y-4"></div>
 
               <div id="cart-empty" class="hidden bg-surface-container-lowest rounded-lg p-8 border border-outline-variant/30">
@@ -876,8 +876,8 @@
                   <div class="flex items-start gap-3">
                     <span class="material-symbols-outlined text-secondary-container">lightbulb</span>
                     <p class="text-sm font-medium leading-relaxed">
-                      <span class="text-secondary-container font-bold">Maslahat:</span>
-                      Kunlik maqsadga ozgina qoldi — davom eting.
+                      <span class="text-secondary-container font-bold" data-i18n="cart.tipLabel">Maslahat:</span>
+                      <span data-i18n="cart.tipBody">Kunlik maqsadga ozgina qoldi — davom eting.</span>
                     </p>
                   </div>
                 </div>
@@ -1285,6 +1285,7 @@
       const LANG_STORAGE_KEY = "azgu.lang.v1";
       const I18N = {
         uz: {
+          "meta.title": "AZGU — Nutrition Plan",
           "nav.home": "Bosh sahifa",
           "nav.menu": "Menyu",
           "nav.meal": "Maslahatlar",
@@ -1335,6 +1336,12 @@
           "cart.subtotal": "Oraliq summa",
           "cart.fee": "Xizmat",
           "cart.total": "Jami",
+          "cart.selection": "Tanlanganlar",
+          "cart.tipLabel": "Maslahat:",
+          "cart.tipBody": "Kunlik maqsadga ozgina qoldi — davom eting.",
+          "cart.optimized": "NATIJA UCHUN MOSLANGAN",
+          "unit.kcal": "kcal",
+          "aria.home": "AZGU bosh sahifa",
           "macro.kcal": "Kkal",
           "macro.protein": "Protein",
           "macro.fat": "Yog‘",
@@ -1371,6 +1378,7 @@
           "tips.fastfood.p4": "- Yechim: taqiqlamaslik, rejalash va haftalik balansni ushlash.",
         },
         ru: {
+          "meta.title": "AZGU — Питание",
           "nav.home": "Главная",
           "nav.menu": "Меню",
           "nav.meal": "Советы",
@@ -1421,6 +1429,12 @@
           "cart.subtotal": "Промежуточная сумма",
           "cart.fee": "Сервис",
           "cart.total": "Итого",
+          "cart.selection": "Выбранное",
+          "cart.tipLabel": "Совет:",
+          "cart.tipBody": "До дневной цели осталось совсем немного — продолжайте.",
+          "cart.optimized": "ОПТИМИЗИРОВАНО ДЛЯ РЕЗУЛЬТАТА",
+          "unit.kcal": "ккал",
+          "aria.home": "Главная AZGU",
           "macro.kcal": "Ккал",
           "macro.protein": "Белки",
           "macro.fat": "Жиры",
@@ -1457,6 +1471,7 @@
           "tips.fastfood.p4": "- Решение: не запрещать, а планировать и держать норму по неделе.",
         },
         en: {
+          "meta.title": "AZGU — Nutrition Plan",
           "nav.home": "Home",
           "nav.menu": "Menu",
           "nav.meal": "Tips",
@@ -1507,6 +1522,12 @@
           "cart.subtotal": "Subtotal",
           "cart.fee": "Service fee",
           "cart.total": "Total",
+          "cart.selection": "Selected",
+          "cart.tipLabel": "Tip:",
+          "cart.tipBody": "You’re close to your daily goal — keep going.",
+          "cart.optimized": "OPTIMIZED FOR RESULTS",
+          "unit.kcal": "kcal",
+          "aria.home": "AZGU home",
           "macro.kcal": "Kcal",
           "macro.protein": "Protein",
           "macro.fat": "Fat",
@@ -1577,6 +1598,14 @@
           if (typeof value !== "string") continue;
           el.textContent = value;
         }
+
+        for (const el of document.querySelectorAll("[data-i18n-aria-label]")) {
+          const key = el.getAttribute("data-i18n-aria-label");
+          if (!key) continue;
+          const value = dict[key];
+          if (typeof value !== "string") continue;
+          el.setAttribute("aria-label", value);
+        }
       }
 
       function setLang(lang) {
@@ -1587,6 +1616,8 @@
         document.documentElement.lang = next;
         setActiveLangButtons(next);
         applyI18n(next);
+        const metaTitle = (I18N[next] || I18N.uz)["meta.title"];
+        if (typeof metaTitle === "string") document.title = metaTitle;
       }
 
       function enhanceTapPress() {
