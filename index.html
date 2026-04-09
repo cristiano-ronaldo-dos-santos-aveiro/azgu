@@ -147,7 +147,7 @@
     >
       <div class="flex items-center gap-4">
         <span class="material-symbols-outlined text-[#03271a] cursor-pointer">menu</span>
-        <a class="flex items-center gap-3" href="#home" aria-label="AZGU bosh sahifa">
+        <a class="flex items-center gap-3" href="#home" aria-label="AZGU bosh sahifa" data-i18n="aria.home">
           <img src="./assets/logo.png" alt="AZGU logo" class="h-8 w-8 rounded-md object-cover shadow-sm" />
           <span class="text-xl font-black text-[#03271a] tracking-tighter">AZGU</span>
         </a>
@@ -232,7 +232,9 @@
               <div class="bg-surface-container-lowest rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 group">
                 <div class="relative h-64 overflow-hidden">
                   <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="./assets/dishes/salmon.png" />
-                  <div class="absolute top-4 right-4 bg-secondary-container text-primary px-3 py-1 rounded-full text-xs font-bold">450 kcal</div>
+                  <div class="absolute top-4 right-4 bg-secondary-container text-primary px-3 py-1 rounded-full text-xs font-bold">
+                    450 <span data-i18n="unit.kcal">kcal</span>
+                  </div>
                 </div>
                 <div class="p-6">
                   <h3 class="text-xl font-bold mb-1" data-i18n="product.salmon.title">Losos (file)</h3>
@@ -254,7 +256,9 @@
               <div class="bg-surface-container-lowest rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 group">
                 <div class="relative h-64 overflow-hidden">
                   <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="./assets/dishes/chicken.png" />
-                  <div class="absolute top-4 right-4 bg-secondary-container text-primary px-3 py-1 rounded-full text-xs font-bold">310 kcal</div>
+                  <div class="absolute top-4 right-4 bg-secondary-container text-primary px-3 py-1 rounded-full text-xs font-bold">
+                    310 <span data-i18n="unit.kcal">kcal</span>
+                  </div>
                 </div>
                 <div class="p-6">
                   <h3 class="text-xl font-bold mb-1" data-i18n="product.chicken.title">Tovuq (file)</h3>
@@ -276,7 +280,9 @@
               <div class="bg-surface-container-lowest rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 group">
                 <div class="relative h-64 overflow-hidden">
                   <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="./assets/dishes/beef_steak.png" />
-                  <div class="absolute top-4 right-4 bg-secondary-container text-primary px-3 py-1 rounded-full text-xs font-bold">520 kcal</div>
+                  <div class="absolute top-4 right-4 bg-secondary-container text-primary px-3 py-1 rounded-full text-xs font-bold">
+                    520 <span data-i18n="unit.kcal">kcal</span>
+                  </div>
                 </div>
                 <div class="p-6">
                   <h3 class="text-xl font-bold mb-1" data-i18n="product.beef_steak.title">Mol go‘sht (steak)</h3>
@@ -313,8 +319,8 @@
                 >
               </div>
               <div class="relative z-10 space-y-2 text-center md:text-left">
-                <h4 class="text-secondary-container font-bold uppercase tracking-widest text-sm">Sog‘lom odat</h4>
-                <p class="text-white text-xl md:text-3xl font-semibold leading-tight max-w-2xl">
+                <h4 class="text-secondary-container font-bold uppercase tracking-widest text-sm" data-i18n="home.tipKicker">Sog‘lom odat</h4>
+                <p class="text-white text-xl md:text-3xl font-semibold leading-tight max-w-2xl" data-i18n="home.tipQuote">
                   "Bilarmidingiz? Protein me’yorida bo‘lsa, mushak tiklanishi va metabolizm yaxshilanadi."
                 </p>
               </div>
@@ -407,22 +413,22 @@
                 </div>
                 <div class="flex flex-wrap gap-4 mt-4 mb-6">
                   <div class="flex flex-col">
-                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Kkal</span>
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold" data-i18n="macro.kcal">Kkal</span>
                     <span class="text-sm font-bold text-primary">450</span>
                   </div>
                   <div class="h-8 w-[1px] bg-outline-variant/15"></div>
                   <div class="flex flex-col">
-                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Protein</span>
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold" data-i18n="macro.protein">Protein</span>
                     <span class="text-sm font-bold text-primary">42g</span>
                   </div>
                   <div class="h-8 w-[1px] bg-outline-variant/15"></div>
                   <div class="flex flex-col">
-                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Yog‘</span>
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold" data-i18n="macro.fat">Yog‘</span>
                     <span class="text-sm font-bold text-primary">12g</span>
                   </div>
                   <div class="h-8 w-[1px] bg-outline-variant/15"></div>
                   <div class="flex flex-col">
-                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Uglevod</span>
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold" data-i18n="macro.carbs">Uglevod</span>
                     <span class="text-sm font-bold text-primary">15g</span>
                   </div>
                 </div>
@@ -450,22 +456,22 @@
                 </div>
                 <div class="flex flex-wrap gap-4 mt-4 mb-6">
                   <div class="flex flex-col">
-                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Kkal</span>
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold" data-i18n="macro.kcal">Kkal</span>
                     <span class="text-sm font-bold text-primary">310</span>
                   </div>
                   <div class="h-8 w-[1px] bg-outline-variant/15"></div>
                   <div class="flex flex-col">
-                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Protein</span>
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold" data-i18n="macro.protein">Protein</span>
                     <span class="text-sm font-bold text-primary">38g</span>
                   </div>
                   <div class="h-8 w-[1px] bg-outline-variant/15"></div>
                   <div class="flex flex-col">
-                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Yog‘</span>
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold" data-i18n="macro.fat">Yog‘</span>
                     <span class="text-sm font-bold text-primary">6g</span>
                   </div>
                   <div class="h-8 w-[1px] bg-outline-variant/15"></div>
                   <div class="flex flex-col">
-                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Uglevod</span>
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold" data-i18n="macro.carbs">Uglevod</span>
                     <span class="text-sm font-bold text-primary">8g</span>
                   </div>
                 </div>
@@ -493,22 +499,22 @@
                 </div>
                 <div class="flex flex-wrap gap-4 mt-4 mb-6">
                   <div class="flex flex-col">
-                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Kkal</span>
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold" data-i18n="macro.kcal">Kkal</span>
                     <span class="text-sm font-bold text-primary">520</span>
                   </div>
                   <div class="h-8 w-[1px] bg-outline-variant/15"></div>
                   <div class="flex flex-col">
-                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Protein</span>
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold" data-i18n="macro.protein">Protein</span>
                     <span class="text-sm font-bold text-primary">55g</span>
                   </div>
                   <div class="h-8 w-[1px] bg-outline-variant/15"></div>
                   <div class="flex flex-col">
-                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Yog‘</span>
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold" data-i18n="macro.fat">Yog‘</span>
                     <span class="text-sm font-bold text-primary">28g</span>
                   </div>
                   <div class="h-8 w-[1px] bg-outline-variant/15"></div>
                   <div class="flex flex-col">
-                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Uglevod</span>
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold" data-i18n="macro.carbs">Uglevod</span>
                     <span class="text-sm font-bold text-primary">2g</span>
                   </div>
                 </div>
@@ -536,22 +542,22 @@
                 </div>
                 <div class="flex flex-wrap gap-4 mt-4 mb-6">
                   <div class="flex flex-col">
-                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Kkal</span>
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold" data-i18n="macro.kcal">Kkal</span>
                     <span class="text-sm font-bold text-primary">200</span>
                   </div>
                   <div class="h-8 w-[1px] bg-outline-variant/15"></div>
                   <div class="flex flex-col">
-                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Protein</span>
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold" data-i18n="macro.protein">Protein</span>
                     <span class="text-sm font-bold text-primary">4g</span>
                   </div>
                   <div class="h-8 w-[1px] bg-outline-variant/15"></div>
                   <div class="flex flex-col">
-                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Yog‘</span>
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold" data-i18n="macro.fat">Yog‘</span>
                     <span class="text-sm font-bold text-primary">1g</span>
                   </div>
                   <div class="h-8 w-[1px] bg-outline-variant/15"></div>
                   <div class="flex flex-col">
-                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Uglevod</span>
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold" data-i18n="macro.carbs">Uglevod</span>
                     <span class="text-sm font-bold text-primary">44g</span>
                   </div>
                 </div>
@@ -579,22 +585,22 @@
                 </div>
                 <div class="flex flex-wrap gap-4 mt-4 mb-6">
                   <div class="flex flex-col">
-                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Kkal</span>
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold" data-i18n="macro.kcal">Kkal</span>
                     <span class="text-sm font-bold text-primary">180</span>
                   </div>
                   <div class="h-8 w-[1px] bg-outline-variant/15"></div>
                   <div class="flex flex-col">
-                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Protein</span>
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold" data-i18n="macro.protein">Protein</span>
                     <span class="text-sm font-bold text-primary">4g</span>
                   </div>
                   <div class="h-8 w-[1px] bg-outline-variant/15"></div>
                   <div class="flex flex-col">
-                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Yog‘</span>
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold" data-i18n="macro.fat">Yog‘</span>
                     <span class="text-sm font-bold text-primary">0g</span>
                   </div>
                   <div class="h-8 w-[1px] bg-outline-variant/15"></div>
                   <div class="flex flex-col">
-                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold">Uglevod</span>
+                    <span class="text-[10px] uppercase tracking-widest text-outline font-bold" data-i18n="macro.carbs">Uglevod</span>
                     <span class="text-sm font-bold text-primary">37g</span>
                   </div>
                 </div>
@@ -629,173 +635,102 @@
       <!-- MEAL DETAIL -->
       <main id="view-meal" data-view="meal" class="view hidden">
         <div class="mt-0 max-w-4xl mx-auto px-4 md:px-0">
-          <section class="relative h-[397px] md:h-[530px] overflow-hidden rounded-lg mt-4 mb-8">
-            <img
-              alt="Grilled Salmon with Asparagus"
-              class="w-full h-full object-cover"
-              src="./assets/dishes/salmon.png"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-            <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
-              <div class="flex gap-2">
-                <span class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Keto Friendly</span>
-                <span class="bg-white/20 backdrop-blur-md text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">High Protein</span>
+          <section class="px-2 pt-8 pb-6">
+            <div class="bg-primary-container rounded-lg p-8 md:p-10 relative overflow-hidden">
+              <div class="absolute -top-16 -right-16 w-64 h-64 bg-secondary-container rounded-full blur-[80px] opacity-40"></div>
+              <div class="relative space-y-3">
+                <h2 class="font-headline font-black text-4xl md:text-5xl text-primary tracking-tight" data-i18n="tips.title">Советы</h2>
+                <p class="text-on-surface-variant font-medium text-lg leading-relaxed" data-i18n="tips.subtitle">
+                  Коротко и по делу: питание, ПП, продукты, привычки. Мы в AZGU верим в устойчивый результат без крайностей.
+                </p>
               </div>
             </div>
           </section>
 
-          <section class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 px-2">
-            <div class="space-y-1">
-              <h2 class="font-headline font-bold text-4xl md:text-5xl text-primary tracking-tight leading-none">Gril losos va asparagus</h2>
-              <p class="text-on-surface-variant font-medium text-lg">Oshpaz tavsiyasi</p>
-            </div>
-            <div class="mt-6 md:mt-0">
-              <p class="font-headline font-black text-3xl text-primary">75,000 <span class="text-lg font-bold">UZS</span></p>
-            </div>
-          </section>
+          <section class="px-2 pb-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="bg-surface-container-lowest rounded-lg p-6 border border-outline-variant/20">
+                <p class="text-xs font-bold uppercase tracking-widest text-outline mb-2" data-i18n="tips.about.kicker">О нас</p>
+                <h3 class="font-headline font-bold text-2xl text-primary mb-2" data-i18n="tips.about.title">Философия AZGU</h3>
+                <p class="text-on-surface-variant font-medium leading-relaxed" data-i18n="tips.about.body">
+                  Мы про понятные продукты, честные порции и контроль прогресса. Не “диета на неделю”, а система, которую реально держать.
+                </p>
+              </div>
 
-          <section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-            <div class="bg-surface-container-low p-6 rounded-lg flex flex-col justify-between h-32">
-              <span class="text-on-surface-variant text-sm font-semibold uppercase tracking-wider">Calories</span>
-              <div class="flex items-baseline gap-1">
-                <span class="text-3xl font-bold font-headline text-primary">450</span>
-                <span class="text-xs font-medium">kcal</span>
-              </div>
-              <div class="w-full h-1 bg-surface-variant rounded-full overflow-hidden">
-                <div class="bg-primary h-full w-[80%]"></div>
-              </div>
-            </div>
-            <div class="bg-secondary-container/20 p-6 rounded-lg flex flex-col justify-between h-32">
-              <span class="text-secondary text-sm font-semibold uppercase tracking-wider">Protein</span>
-              <div class="flex items-baseline gap-1">
-                <span class="text-3xl font-bold font-headline text-secondary">42</span>
-                <span class="text-xs font-medium">g</span>
-              </div>
-              <div class="w-full h-1 bg-secondary-fixed-dim/30 rounded-full overflow-hidden">
-                <div class="bg-secondary h-full w-[90%]"></div>
-              </div>
-            </div>
-            <div class="bg-surface-container-low p-6 rounded-lg flex flex-col justify-between h-32">
-              <span class="text-on-surface-variant text-sm font-semibold uppercase tracking-wider">Fats</span>
-              <div class="flex items-baseline gap-1">
-                <span class="text-3xl font-bold font-headline text-primary">12</span>
-                <span class="text-xs font-medium">g</span>
-              </div>
-              <div class="w-full h-1 bg-surface-variant rounded-full overflow-hidden">
-                <div class="bg-primary h-full w-[35%]"></div>
-              </div>
-            </div>
-            <div class="bg-surface-container-low p-6 rounded-lg flex flex-col justify-between h-32">
-              <span class="text-on-surface-variant text-sm font-semibold uppercase tracking-wider">Carbs</span>
-              <div class="flex items-baseline gap-1">
-                <span class="text-3xl font-bold font-headline text-primary">15</span>
-                <span class="text-xs font-medium">g</span>
-              </div>
-              <div class="w-full h-1 bg-surface-variant rounded-full overflow-hidden">
-                <div class="bg-primary h-full w-[20%]"></div>
+              <div class="bg-surface-container-lowest rounded-lg p-6 border border-outline-variant/20">
+                <p class="text-xs font-bold uppercase tracking-widest text-outline mb-2" data-i18n="tips.pp.kicker">ПП</p>
+                <h3 class="font-headline font-bold text-2xl text-primary mb-2" data-i18n="tips.pp.title">Мини‑правила на каждый день</h3>
+                <ul class="space-y-3 text-on-surface-variant font-medium">
+                  <li data-i18n="tips.pp.rule1">- Белок в каждом приёме пищи (сытость и восстановление).</li>
+                  <li data-i18n="tips.pp.rule2">- Овощи 1–2 раза в день (клетчатка и микроэлементы).</li>
+                  <li data-i18n="tips.pp.rule3">- Вода + сон = половина результата.</li>
+                  <li data-i18n="tips.pp.rule4">- 80/20: в целом “чисто”, иногда можно “для души”.</li>
+                </ul>
               </div>
             </div>
           </section>
 
-          <section class="mb-28 px-2">
-            <div class="bg-surface-container-lowest/70 backdrop-blur-xl border border-outline-variant/20 rounded-lg shadow-[0_10px_40px_-15px_rgba(25,28,28,0.06)] overflow-hidden">
-              <details class="group">
-                <summary class="list-none cursor-pointer select-none px-6 py-5 flex items-center justify-between gap-4">
-                  <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-secondary">favorite</span>
-                    <div>
-                      <p class="font-headline font-bold text-primary">Foydasi</p>
-                      <p class="text-sm text-on-surface-variant font-medium">Qisqa tavsif — batafsil oching</p>
-                    </div>
-                  </div>
-                  <span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">expand_more</span>
-                </summary>
-                <div class="px-6 pb-6 text-on-surface-variant font-medium leading-relaxed">
-                  Omega-3 ko‘p: yurak salomatligi va bo‘g‘imlar uchun foydali.
+          <section class="px-2 pb-8">
+            <div class="bg-surface-container-lowest rounded-lg p-6 md:p-8 border border-outline-variant/20">
+              <div class="flex items-start justify-between gap-4 mb-4">
+                <div>
+                  <p class="text-xs font-bold uppercase tracking-widest text-outline mb-2" data-i18n="tips.products.kicker">Продукты</p>
+                  <h3 class="font-headline font-bold text-2xl text-primary" data-i18n="tips.products.title">Плюсы и минусы — без мифов</h3>
                 </div>
-              </details>
-
-              <div class="h-px bg-outline-variant/20"></div>
-
-              <details class="group">
-                <summary class="list-none cursor-pointer select-none px-6 py-5 flex items-center justify-between gap-4">
-                  <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-secondary">restaurant</span>
-                    <div>
-                      <p class="font-headline font-bold text-primary">Tarkibi</p>
-                      <p class="text-sm text-on-surface-variant font-medium">Asosiy ingredientlar</p>
-                    </div>
-                  </div>
-                  <span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">expand_more</span>
-                </summary>
-                <div class="px-6 pb-6">
-                  <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <li class="flex items-center gap-3 text-on-surface-variant font-medium">
-                      <span class="w-2 h-2 rounded-full bg-secondary"></span>
-                      Fresh Atlantic salmon
-                    </li>
-                    <li class="flex items-center gap-3 text-on-surface-variant font-medium">
-                      <span class="w-2 h-2 rounded-full bg-secondary"></span>
-                      Asparagus
-                    </li>
-                    <li class="flex items-center gap-3 text-on-surface-variant font-medium">
-                      <span class="w-2 h-2 rounded-full bg-secondary"></span>
-                      Lemon
-                    </li>
-                    <li class="flex items-center gap-3 text-on-surface-variant font-medium">
-                      <span class="w-2 h-2 rounded-full bg-secondary"></span>
-                      Sea salt
-                    </li>
-                    <li class="flex items-center gap-3 text-on-surface-variant font-medium">
-                      <span class="w-2 h-2 rounded-full bg-secondary"></span>
-                      Olive oil
-                    </li>
+                <span class="material-symbols-outlined text-secondary text-3xl">fact_check</span>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-surface-container-low rounded-lg p-5">
+                  <p class="font-headline font-bold text-primary mb-1" data-i18n="tips.products.plusTitle">Плюсы</p>
+                  <ul class="space-y-2 text-on-surface-variant font-medium">
+                    <li data-i18n="tips.products.plus1">- Цельные продукты дают сытость и стабильную энергию.</li>
+                    <li data-i18n="tips.products.plus2">- Белок помогает сохранять мышечную массу.</li>
+                    <li data-i18n="tips.products.plus3">- Клетчатка улучшает пищеварение и контроль аппетита.</li>
                   </ul>
                 </div>
-              </details>
-
-              <div class="h-px bg-outline-variant/20"></div>
-
-              <details class="group">
-                <summary class="list-none cursor-pointer select-none px-6 py-5 flex items-center justify-between gap-4">
-                  <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-secondary">lightbulb</span>
-                    <div>
-                      <p class="font-headline font-bold text-primary">Maslahat</p>
-                      <p class="text-sm text-on-surface-variant font-medium">Foydali tavsiya</p>
-                    </div>
-                  </div>
-                  <span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">expand_more</span>
-                </summary>
-                <div class="px-6 pb-6 text-on-surface-variant font-medium leading-relaxed">
-                  Lososni ko‘katlar bilan tanovul qilsangiz, minerallar yaxshi so‘riladi.
+                <div class="bg-error-container/40 rounded-lg p-5 border border-error/20">
+                  <p class="font-headline font-bold text-primary mb-1" data-i18n="tips.products.minusTitle">Минусы “вредной еды”</p>
+                  <ul class="space-y-2 text-on-surface-variant font-medium">
+                    <li data-i18n="tips.products.minus1">- Много соли/сахара → задержка воды и “качели” аппетита.</li>
+                    <li data-i18n="tips.products.minus2">- Много масла → калории растут незаметно.</li>
+                    <li data-i18n="tips.products.minus3">- Мало клетчатки → быстро снова хочется есть.</li>
+                  </ul>
                 </div>
-              </details>
+              </div>
             </div>
           </section>
 
-          <div class="fixed bottom-24 left-0 w-full px-4 md:px-6 z-40">
-            <div class="max-w-4xl mx-auto bg-surface-container-lowest/80 backdrop-blur-2xl shadow-2xl rounded-full p-3 flex items-center justify-between gap-4 border border-outline-variant/15">
-              <div class="flex items-center bg-surface-container-high rounded-full px-4 py-2">
-                <button class="w-10 h-10 flex items-center justify-center text-primary font-bold hover:bg-surface-variant rounded-full transition-colors" type="button">
-                  <span class="material-symbols-outlined">remove</span>
-                </button>
-                <span class="mx-6 font-headline font-bold text-xl">1</span>
-                <button class="w-10 h-10 flex items-center justify-center text-primary font-bold hover:bg-surface-variant rounded-full transition-colors" type="button">
-                  <span class="material-symbols-outlined">add</span>
-                </button>
-              </div>
-              <button
-                class="flex-1 bg-primary text-on-primary font-headline font-bold py-4 px-8 rounded-full flex items-center justify-center gap-3 hover:opacity-90 active:scale-[0.98] transition-all"
-                type="button"
-                data-action="add-to-cart"
-                data-product-id="salmon"
-              >
-                <span>Savatga qo‘shish</span>
-                <span class="material-symbols-outlined">shopping_basket</span>
-              </button>
+          <section class="px-2 pb-16">
+            <div class="bg-primary rounded-lg p-6 md:p-8 text-white shadow-2xl">
+              <h3 class="font-headline font-bold text-2xl mb-3" data-i18n="tips.fastfood.title">Фастфуд: где реальный вред</h3>
+              <ul class="space-y-2 text-on-primary-container font-medium">
+                <li data-i18n="tips.fastfood.p1">- Часто это калорийно, но не насыщает надолго.</li>
+                <li data-i18n="tips.fastfood.p2">- Комбо “жир + сахар” усиливает тягу к перекусам.</li>
+                <li data-i18n="tips.fastfood.p3">- Регулярно → сложнее держать дефицит/баланс.</li>
+                <li data-i18n="tips.fastfood.p4">- Решение: не запрещать, а планировать и держать норму по неделе.</li>
+              </ul>
             </div>
-          </div>
+
+            <div class="mt-8 flex items-center justify-center gap-4">
+              <a class="tap-press w-12 h-12 rounded-full bg-surface-container-lowest border border-outline-variant/30 flex items-center justify-center" href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M12 8.2a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6Z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M17.6 6.4h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+              </a>
+              <a class="tap-press w-12 h-12 rounded-full bg-surface-container-lowest border border-outline-variant/30 flex items-center justify-center" href="https://t.me" target="_blank" rel="noreferrer" aria-label="Telegram">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M21.5 3.5 2.8 11.2c-.9.4-.8 1.7.2 2l4.8 1.5 1.8 5.5c.3 1 1.6 1.1 2.1.2l2.9-4.6 4.9 3.7c.8.6 1.9.1 2.1-.9L22.9 4.6c.2-1-.7-1.8-1.4-1.1Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a class="tap-press w-12 h-12 rounded-full bg-surface-container-lowest border border-outline-variant/30 flex items-center justify-center" href="tel:+0000000000" aria-label="Phone">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M6.5 3.5h3l1.2 5-2 1.4a14.5 14.5 0 0 0 6.4 6.4l1.4-2 5 1.2v3A2.5 2.5 0 0 1 19 21.5C10.4 20.6 3.4 13.6 2.5 5A2.5 2.5 0 0 1 6.5 3.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </section>
         </div>
       </main>
 
@@ -803,6 +738,16 @@
       <main id="view-cart" data-view="cart" class="view hidden">
         <div class="pt-8 pb-12 px-6 max-w-5xl mx-auto">
           <section class="mb-10">
+            <div class="mb-4">
+              <button
+                type="button"
+                data-action="go-back"
+                class="tap-press inline-flex items-center gap-2 text-primary font-headline font-bold px-4 py-2 rounded-full bg-surface-container-low hover:bg-surface-container-high transition-colors"
+              >
+                <span class="material-symbols-outlined">arrow_back</span>
+                <span data-i18n="cart.back">Назад</span>
+              </button>
+            </div>
             <div class="flex items-end justify-between mb-6">
               <div>
                 <h2 class="font-headline font-bold text-3xl tracking-tight text-primary" data-i18n="cart.title">Aqlli savat</h2>
@@ -818,7 +763,7 @@
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div class="bg-surface-container-lowest p-6 rounded-lg shadow-[0_10px_40px_rgba(25,28,28,0.03)] border-b-4 border-primary">
-                <p class="font-label text-xs font-bold uppercase tracking-widest text-outline mb-1">Calories</p>
+                <p class="font-label text-xs font-bold uppercase tracking-widest text-outline mb-1" data-i18n="macro.calories">Calories</p>
                 <div class="flex items-baseline gap-1">
                   <span class="font-headline text-3xl font-extrabold text-primary" id="macro-kcal">0</span>
                   <span class="text-outline text-sm font-medium">kcal</span>
@@ -828,7 +773,7 @@
                 </div>
               </div>
               <div class="bg-surface-container-lowest p-6 rounded-lg shadow-[0_10px_40px_rgba(25,28,28,0.03)] border-b-4 border-secondary">
-                <p class="font-label text-xs font-bold uppercase tracking-widest text-outline mb-1">Protein</p>
+                <p class="font-label text-xs font-bold uppercase tracking-widest text-outline mb-1" data-i18n="macro.proteinLabel">Protein</p>
                 <div class="flex items-baseline gap-1">
                   <span class="font-headline text-3xl font-extrabold text-primary" id="macro-protein">0</span>
                   <span class="text-outline text-sm font-medium">g</span>
@@ -838,7 +783,7 @@
                 </div>
               </div>
               <div class="bg-surface-container-lowest p-6 rounded-lg shadow-[0_10px_40px_rgba(25,28,28,0.03)] border-b-4 border-primary-fixed-dim">
-                <p class="font-label text-xs font-bold uppercase tracking-widest text-outline mb-1">Fat</p>
+                <p class="font-label text-xs font-bold uppercase tracking-widest text-outline mb-1" data-i18n="macro.fatLabel">Fat</p>
                 <div class="flex items-baseline gap-1">
                   <span class="font-headline text-3xl font-extrabold text-primary" id="macro-fat">0</span>
                   <span class="text-outline text-sm font-medium">g</span>
@@ -848,7 +793,7 @@
                 </div>
               </div>
               <div class="bg-surface-container-lowest p-6 rounded-lg shadow-[0_10px_40px_rgba(25,28,28,0.03)] border-b-4 border-tertiary-fixed-dim">
-                <p class="font-label text-xs font-bold uppercase tracking-widest text-outline mb-1">Carbs</p>
+                <p class="font-label text-xs font-bold uppercase tracking-widest text-outline mb-1" data-i18n="macro.carbsLabel">Carbs</p>
                 <div class="flex items-baseline gap-1">
                   <span class="font-headline text-3xl font-extrabold text-primary" id="macro-carbs">0</span>
                   <span class="text-outline text-sm font-medium">g</span>
@@ -866,9 +811,9 @@
               <div id="cart-items" class="space-y-4"></div>
 
               <div id="cart-empty" class="hidden bg-surface-container-lowest rounded-lg p-8 border border-outline-variant/30">
-                <h4 class="font-headline font-bold text-xl text-primary mb-2">Savat bo‘sh</h4>
-                <p class="text-on-surface-variant font-medium mb-6">Menyudan taom tanlab, savatga qo‘shing.</p>
-                <a class="inline-flex items-center justify-center bg-primary text-on-primary px-6 py-3 rounded-full font-bold" href="#menu">Menyuga o‘tish</a>
+                <h4 class="font-headline font-bold text-xl text-primary mb-2" data-i18n="cart.emptyTitle">Savat bo‘sh</h4>
+                <p class="text-on-surface-variant font-medium mb-6" data-i18n="cart.emptyBody">Menyudan taom tanlab, savatga qo‘shing.</p>
+                <a class="inline-flex items-center justify-center bg-primary text-on-primary px-6 py-3 rounded-full font-bold" href="#menu" data-i18n="cart.emptyCta">Menyuga o‘tish</a>
               </div>
 
               <template id="cart-item-template">
@@ -894,7 +839,7 @@
                           <span class="material-symbols-outlined text-sm">add</span>
                         </button>
                       </div>
-                      <button class="text-error font-bold text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity" type="button" data-action="remove-item">
+                      <button class="text-error font-bold text-xs uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity" type="button" data-action="remove-item" data-i18n="cart.remove">
                         O‘chirish
                       </button>
                     </div>
@@ -905,18 +850,18 @@
 
             <aside class="w-full lg:w-96 flex-shrink-0">
               <div class="bg-primary p-8 rounded-lg text-white shadow-2xl sticky top-24">
-                <h3 class="font-headline font-bold text-2xl mb-8">Hisob</h3>
+                <h3 class="font-headline font-bold text-2xl mb-8" data-i18n="cart.summaryTitle">Hisob</h3>
                 <div class="space-y-4 mb-8">
                   <div class="flex justify-between text-on-primary-container font-medium">
-                    <span>Oraliq summa</span>
+                    <span data-i18n="cart.subtotal">Oraliq summa</span>
                     <span id="summary-subtotal">0 UZS</span>
                   </div>
                   <div class="flex justify-between text-on-primary-container font-medium">
-                    <span>Xizmat</span>
+                    <span data-i18n="cart.fee">Xizmat</span>
                     <span id="summary-fee">0 UZS</span>
                   </div>
                   <div class="pt-4 border-t border-white/10 flex justify-between items-baseline">
-                    <span class="font-headline font-bold text-lg">Jami</span>
+                    <span class="font-headline font-bold text-lg" data-i18n="cart.total">Jami</span>
                     <span class="font-headline font-extrabold text-2xl" id="summary-total">0 UZS</span>
                   </div>
                 </div>
@@ -1252,7 +1197,10 @@
         if (viewId === "cart") renderCartUI();
       }
 
-      window.addEventListener("hashchange", () => showView(getHashView()));
+      window.addEventListener("hashchange", () => {
+        trackLastView();
+        showView(getHashView());
+      });
       document.addEventListener("click", (e) => {
         const btn = e.target.closest("[data-action]");
         if (!btn) return;
@@ -1271,9 +1219,13 @@
           return;
         }
 
+        if (action === "go-back") {
+          goBackFromCart();
+          return;
+        }
+
         if (action === "add-to-cart" && productId) {
           addToCart(productId, 1);
-          location.hash = "#cart";
           return;
         }
 
@@ -1287,6 +1239,18 @@
         if (action === "qty-dec") setQty(itemProductId, current - 1);
         if (action === "remove-item") setQty(itemProductId, 0);
       });
+
+      let lastNonCartView = "home";
+
+      function trackLastView() {
+        const v = getHashView();
+        if (v !== "cart") lastNonCartView = v;
+      }
+
+      function goBackFromCart() {
+        const target = lastNonCartView || "home";
+        location.hash = `#${target}`;
+      }
 
       let activeMenuFilter = "all";
 
@@ -1323,7 +1287,7 @@
         uz: {
           "nav.home": "Bosh sahifa",
           "nav.menu": "Menyu",
-          "nav.meal": "Taom",
+          "nav.meal": "Maslahatlar",
           "nav.cart": "Savat",
           "home.heroLine1": "Aniqlik bilan ovqatlaning",
           "home.heroLine2Prefix": "",
@@ -1332,6 +1296,8 @@
           "home.heroSub": "Maqsadingizga mos, oshpazlar tayyorlagan taomlar va kunlik nazorat. Ilmiy asoslangan, mukammal ta’m.",
           "home.liveTracking": "Live nazorat",
           "home.macroAccuracy": "Makrolar hisobida 98% aniqlik",
+          "home.tipKicker": "Sog‘lom odat",
+          "home.tipQuote": "\"Bilarmidingiz? Protein me’yorida bo‘lsa, mushak tiklanishi va metabolizm yaxshilanadi.\"",
           "cta.menu": "Menyuni ko‘rish",
           "cta.learnMore": "Batafsil",
           "cta.viewAll": "Hammasi",
@@ -1360,11 +1326,54 @@
           "cart.title": "Aqlli savat",
           "cart.subtitle": "Kunlik reja — real vaqt nazorati",
           "cart.checkout": "Buyurtma berish",
+          "cart.back": "Orqaga",
+          "cart.emptyTitle": "Savat bo‘sh",
+          "cart.emptyBody": "Menyudan taom tanlab, savatga qo‘shing.",
+          "cart.emptyCta": "Menyuga o‘tish",
+          "cart.remove": "O‘chirish",
+          "cart.summaryTitle": "Hisob",
+          "cart.subtotal": "Oraliq summa",
+          "cart.fee": "Xizmat",
+          "cart.total": "Jami",
+          "macro.kcal": "Kkal",
+          "macro.protein": "Protein",
+          "macro.fat": "Yog‘",
+          "macro.carbs": "Uglevod",
+          "macro.calories": "Calories",
+          "macro.proteinLabel": "Protein",
+          "macro.fatLabel": "Fat",
+          "macro.carbsLabel": "Carbs",
+          "tips.title": "Maslahatlar",
+          "tips.subtitle": "Qisqa va amaliy: ovqatlanish, PP, mahsulotlar va odatlar. AZGU — keskinliksiz barqaror natija tarafdori.",
+          "tips.about.kicker": "Biz haqimizda",
+          "tips.about.title": "AZGU falsafasi",
+          "tips.about.body": "Biz sodda mahsulotlar, halol porsiya va progress nazoratini yoqlaymiz. Bu “1 haftalik dieta” emas, ushlab turiladigan tizim.",
+          "tips.pp.kicker": "PP",
+          "tips.pp.title": "Har kun uchun mini-qoidalar",
+          "tips.pp.rule1": "- Har ovqatda protein (to‘yish va tiklanish).",
+          "tips.pp.rule2": "- Kuniga 1–2 marta sabzavot (kletchatka va mikroelementlar).",
+          "tips.pp.rule3": "- Suv + uyqu = natijaning yarmi.",
+          "tips.pp.rule4": "- 80/20: asosan toza, ba’zan “ko‘ngil uchun”.",
+          "tips.products.kicker": "Mahsulotlar",
+          "tips.products.title": "Foyda va zarar — miflarsiz",
+          "tips.products.plusTitle": "Foydasi",
+          "tips.products.plus1": "- Tabiiy mahsulotlar to‘yish va barqaror energiya beradi.",
+          "tips.products.plus2": "- Protein mushakni saqlashga yordam beradi.",
+          "tips.products.plus3": "- Kletchatka hazm va ishtahani nazorat qiladi.",
+          "tips.products.minusTitle": "Zararli ovqat minuslari",
+          "tips.products.minus1": "- Tuz/shakar ko‘p → suv ushlanishi va ishtaha “tebranadi”.",
+          "tips.products.minus2": "- Yog‘ ko‘p → kaloriya sezilmay oshadi.",
+          "tips.products.minus3": "- Kletchatka kam → tez och qolish.",
+          "tips.fastfood.title": "Fastfud: haqiqiy zarar qayerda",
+          "tips.fastfood.p1": "- Ko‘pincha kaloriyasi yuqori, lekin tez och qoldiradi.",
+          "tips.fastfood.p2": "- “Yog‘ + shakar” kombinatsiyasi gazak istagini kuchaytiradi.",
+          "tips.fastfood.p3": "- Tez-tez bo‘lsa → balans/defitsitni ushlash qiyin.",
+          "tips.fastfood.p4": "- Yechim: taqiqlamaslik, rejalash va haftalik balansni ushlash.",
         },
         ru: {
           "nav.home": "Главная",
           "nav.menu": "Меню",
-          "nav.meal": "Блюдо",
+          "nav.meal": "Советы",
           "nav.cart": "Корзина",
           "home.heroLine1": "Питайтесь точно",
           "home.heroLine2Prefix": "для ",
@@ -1373,6 +1382,8 @@
           "home.heroSub": "Блюда от шефов и ежедневный контроль под вашу цель. Научный подход и отличный вкус.",
           "home.liveTracking": "Live контроль",
           "home.macroAccuracy": "Точность макросов 98%",
+          "home.tipKicker": "Здоровая привычка",
+          "home.tipQuote": "«Знали ли вы? Достаточное количество белка улучшает восстановление мышц и обмен веществ.»",
           "cta.menu": "Смотреть меню",
           "cta.learnMore": "Подробнее",
           "cta.viewAll": "Все",
@@ -1401,11 +1412,54 @@
           "cart.title": "Умная корзина",
           "cart.subtitle": "Дневной план — контроль в реальном времени",
           "cart.checkout": "Оформить заказ",
+          "cart.back": "Назад",
+          "cart.emptyTitle": "Корзина пуста",
+          "cart.emptyBody": "Выберите блюда в меню и добавьте их в корзину.",
+          "cart.emptyCta": "Перейти в меню",
+          "cart.remove": "Удалить",
+          "cart.summaryTitle": "Итог",
+          "cart.subtotal": "Промежуточная сумма",
+          "cart.fee": "Сервис",
+          "cart.total": "Итого",
+          "macro.kcal": "Ккал",
+          "macro.protein": "Белки",
+          "macro.fat": "Жиры",
+          "macro.carbs": "Углеводы",
+          "macro.calories": "Калории",
+          "macro.proteinLabel": "Белки",
+          "macro.fatLabel": "Жиры",
+          "macro.carbsLabel": "Углеводы",
+          "tips.title": "Советы",
+          "tips.subtitle": "Коротко и по делу: питание, ПП, продукты, привычки. Мы в AZGU верим в устойчивый результат без крайностей.",
+          "tips.about.kicker": "О нас",
+          "tips.about.title": "Философия AZGU",
+          "tips.about.body": "Мы про понятные продукты, честные порции и контроль прогресса. Не “диета на неделю”, а система, которую реально держать.",
+          "tips.pp.kicker": "ПП",
+          "tips.pp.title": "Мини‑правила на каждый день",
+          "tips.pp.rule1": "- Белок в каждом приёме пищи (сытость и восстановление).",
+          "tips.pp.rule2": "- Овощи 1–2 раза в день (клетчатка и микроэлементы).",
+          "tips.pp.rule3": "- Вода + сон = половина результата.",
+          "tips.pp.rule4": "- 80/20: в целом “чисто”, иногда можно “для души”.",
+          "tips.products.kicker": "Продукты",
+          "tips.products.title": "Плюсы и минусы — без мифов",
+          "tips.products.plusTitle": "Плюсы",
+          "tips.products.plus1": "- Цельные продукты дают сытость и стабильную энергию.",
+          "tips.products.plus2": "- Белок помогает сохранять мышечную массу.",
+          "tips.products.plus3": "- Клетчатка улучшает пищеварение и контроль аппетита.",
+          "tips.products.minusTitle": "Минусы “вредной еды”",
+          "tips.products.minus1": "- Много соли/сахара → задержка воды и “качели” аппетита.",
+          "tips.products.minus2": "- Много масла → калории растут незаметно.",
+          "tips.products.minus3": "- Мало клетчатки → быстро снова хочется есть.",
+          "tips.fastfood.title": "Фастфуд: где реальный вред",
+          "tips.fastfood.p1": "- Часто это калорийно, но не насыщает надолго.",
+          "tips.fastfood.p2": "- Комбо “жир + сахар” усиливает тягу к перекусам.",
+          "tips.fastfood.p3": "- Регулярно → сложнее держать дефицит/баланс.",
+          "tips.fastfood.p4": "- Решение: не запрещать, а планировать и держать норму по неделе.",
         },
         en: {
           "nav.home": "Home",
           "nav.menu": "Menu",
-          "nav.meal": "Meal",
+          "nav.meal": "Tips",
           "nav.cart": "Cart",
           "home.heroLine1": "Eat with precision",
           "home.heroLine2Prefix": "for ",
@@ -1414,6 +1468,8 @@
           "home.heroSub": "Chef-prepared meals and daily tracking tailored to your goal. Science-backed, great taste.",
           "home.liveTracking": "Live tracking",
           "home.macroAccuracy": "98% macro accuracy",
+          "home.tipKicker": "Healthy habit",
+          "home.tipQuote": "\"Did you know? Adequate protein improves muscle recovery and metabolism.\"",
           "cta.menu": "Explore the menu",
           "cta.learnMore": "Learn more",
           "cta.viewAll": "View all",
@@ -1442,6 +1498,49 @@
           "cart.title": "Smart cart",
           "cart.subtitle": "Daily plan — real-time tracking",
           "cart.checkout": "Checkout",
+          "cart.back": "Back",
+          "cart.emptyTitle": "Cart is empty",
+          "cart.emptyBody": "Pick items from the menu and add them to your cart.",
+          "cart.emptyCta": "Go to menu",
+          "cart.remove": "Remove",
+          "cart.summaryTitle": "Summary",
+          "cart.subtotal": "Subtotal",
+          "cart.fee": "Service fee",
+          "cart.total": "Total",
+          "macro.kcal": "Kcal",
+          "macro.protein": "Protein",
+          "macro.fat": "Fat",
+          "macro.carbs": "Carbs",
+          "macro.calories": "Calories",
+          "macro.proteinLabel": "Protein",
+          "macro.fatLabel": "Fat",
+          "macro.carbsLabel": "Carbs",
+          "tips.title": "Tips",
+          "tips.subtitle": "Short and practical: nutrition, clean eating, products, and habits. At AZGU we believe in sustainable results without extremes.",
+          "tips.about.kicker": "About us",
+          "tips.about.title": "AZGU philosophy",
+          "tips.about.body": "We focus on simple food, honest portions, and progress tracking. Not a “one-week diet”, but a system you can actually maintain.",
+          "tips.pp.kicker": "Clean eating",
+          "tips.pp.title": "Mini rules for every day",
+          "tips.pp.rule1": "- Protein in every meal (satiety and recovery).",
+          "tips.pp.rule2": "- Vegetables 1–2 times a day (fiber and micronutrients).",
+          "tips.pp.rule3": "- Water + sleep = half the result.",
+          "tips.pp.rule4": "- 80/20: mostly clean, sometimes for enjoyment.",
+          "tips.products.kicker": "Products",
+          "tips.products.title": "Pros and cons — no myths",
+          "tips.products.plusTitle": "Pros",
+          "tips.products.plus1": "- Whole foods keep you full and steady energy.",
+          "tips.products.plus2": "- Protein helps preserve muscle mass.",
+          "tips.products.plus3": "- Fiber supports digestion and appetite control.",
+          "tips.products.minusTitle": "Cons of junk food",
+          "tips.products.minus1": "- Lots of salt/sugar → water retention and cravings.",
+          "tips.products.minus2": "- Lots of oils → calories rise unnoticed.",
+          "tips.products.minus3": "- Low fiber → you get hungry again fast.",
+          "tips.fastfood.title": "Fast food: the real harm",
+          "tips.fastfood.p1": "- Often high-calorie but not filling for long.",
+          "tips.fastfood.p2": "- Fat + sugar combo boosts snacking urges.",
+          "tips.fastfood.p3": "- Regularly → harder to stay in balance/deficit.",
+          "tips.fastfood.p4": "- Fix: don’t ban it—plan it and keep weekly balance.",
         },
       };
 
@@ -1512,6 +1611,7 @@
       setLang(getLang());
       setMenuFilter("all");
       renderCartUI();
+      trackLastView();
       showView(getHashView());
     </script>
   </body>
